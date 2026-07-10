@@ -91,7 +91,9 @@ devem ser **diferentes entre si** e coerentes como portfólio (independentes, ou
 básico→intermediário→avançado, ou dois complementares + um integrador — escolha a estrutura
 que melhor servir o entrevistado).
 → Formatos de produto e templates de ementa em [references/formatos-produto.md](references/formatos-produto.md).
-→ Formato exato da saída em [references/template-saida.md](references/template-saida.md).
+→ Formato exato da saída (tabela única) em [references/template-saida.md](references/template-saida.md).
+→ Além da tabela em markdown, **gere sempre o PDF** da tabela (Montserrat, uma página, bem espaçado) —
+  ver [references/saida-pdf.md](references/saida-pdf.md) e o template [assets/tabela-template.html](assets/tabela-template.html).
 
 ## Workspace e histórico
 

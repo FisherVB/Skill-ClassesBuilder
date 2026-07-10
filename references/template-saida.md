@@ -44,6 +44,10 @@ parágrafo. Exemplo de célula de workshop:
 A **tabela de scoring** (seção 1) também é tabela — então toda a entrega é comparável em formato de
 tabela do começo ao fim.
 
+**Entrega em PDF (padrão):** além da tabela em markdown no chat, gere sempre um **PDF** da tabela
+final — Montserrat, uma página, colunas bem espaçadas, código de cor por curso. É o formato que o
+usuário usa para comparar lado a lado. Procedimento e template em [saida-pdf.md](saida-pdf.md).
+
 ### Orientações por coluna
 - **Tema do curso** — nome comercial forte, específico e vendável. Nada genérico.
 - **ICP** — perfil específico de comprador (cargo + senioridade + tipo/porte de empresa + setor).

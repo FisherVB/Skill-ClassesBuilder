@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<!--
+  TEMPLATE da tabela final de cursos (PDF) — skill classes-builder.
+  Como usar:
+  1) Garanta a fonte Montserrat: instale em ~/Library/Fonts OU deixe Montserrat.ttf ao lado deste arquivo
+     (baixe de https://github.com/google/fonts/raw/main/ofl/montserrat/Montserrat%5Bwght%5D.ttf).
+  2) Preencha <tbody> com uma <tr> por curso (2 a 4 cursos), seguindo o exemplo comentado.
+     Classe da linha: r1/r2/r3/r4 define a cor do curso (teal/roxo/terracota/azul).
+  3) Ajuste a altura da página (@page size) para caber em 1 página — ver references/saida-pdf.md.
+  4) Renderize com Chrome headless --print-to-pdf.
+-->
+<style>
+  @font-face{
+    font-family:'Montserrat';
+    src:local('Montserrat'), url('Montserrat.ttf') format('truetype');
+    font-weight:100 900; font-display:swap;
+  }
+  /* Altura ajustada ao conteúdo — recalcular por caso (ver saida-pdf.md). Largura 390mm cabe 7 colunas. */
+  @page{ size:390mm 292mm; margin:16mm; }
+
+  :root{
+    --ink:#14243B; --text:#2B3742; --muted:#71808C; --gold:#B98A44;
+    --hair:#E4E8EC; --hair-v:#EDF0F3; --cream:#F5F1E9;
+    --c1:#2F6F6A; --c2:#6E5A96; --c3:#B06A3B; --c4:#3A5A8C;
+    --tint1:#F4F8F7; --tint2:#F7F5FA; --tint3:#FAF6F2; --tint4:#F3F6FB;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{ font-family:'Montserrat',-apple-system,sans-serif; color:var(--text);
+        -webkit-font-smoothing:antialiased; font-size:11px; line-height:1.5; }
+
+  table{ width:100%; border-collapse:collapse; table-layout:fixed; }
+  colgroup .c-tema{ width:10%; }
+  colgroup .c-icp{ width:12%; }
+  colgroup .c-mkt{ width:13.5%; }
+  colgroup .c-preco{ width:10.5%; }
+  colgroup .c-em{ width:18%; }
+
+  thead th{ background:var(--ink); color:var(--cream); text-align:left; font-weight:600;
+    font-size:10px; letter-spacing:.10em; text-transform:uppercase; padding:15px 16px;
+    border-right:1px solid rgba(255,255,255,.08); vertical-align:middle; }
+  thead th:last-child{ border-right:none; }
+  thead th .fmt{ display:block; font-size:8.5px; font-weight:500; letter-spacing:.06em;
+    color:var(--gold); margin-top:3px; text-transform:none; }
+
+  tbody td{ vertical-align:top; padding:20px 16px; border-bottom:1px solid var(--hair);
+    border-right:1px solid var(--hair-v); }
+  tbody td:last-child{ border-right:none; }
+  tbody tr:last-child td{ border-bottom:none; }
+
+  td.tema{ border-left:4px solid var(--acc); }
+  tr.r1{ --acc:var(--c1); } tr.r2{ --acc:var(--c2); } tr.r3{ --acc:var(--c3); } tr.r4{ --acc:var(--c4); }
+  tr.r1 td.tema{ background:var(--tint1); } tr.r2 td.tema{ background:var(--tint2); }
+  tr.r3 td.tema{ background:var(--tint3); } tr.r4 td.tema{ background:var(--tint4); }
+
+  .tema .name{ display:block; font-weight:700; font-size:15px; line-height:1.25; color:var(--ink); letter-spacing:-.01em; }
+  .tema .sub{ display:block; margin-top:5px; font-weight:500; font-size:11px; color:var(--muted); line-height:1.35; }
+  .icp{ font-weight:500; }
+  .mkt strong{ font-weight:700; color:var(--ink); }
+  .mkt em,.note{ font-style:italic; color:var(--muted); font-size:10px; }
+  .preco .row{ display:block; padding:3px 0; }
+  .preco .row + .row{ border-top:1px solid var(--hair); }
+  .preco .lbl{ display:block; font-size:8.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+  .preco .val{ display:block; font-weight:600; color:var(--ink); font-size:11.5px; }
+
+  ul.ementa{ list-style:none; margin:0; padding:0; }
+  ul.ementa li{ position:relative; padding-left:15px; margin-bottom:8px; }
+  ul.ementa li:last-child{ margin-bottom:0; }
+  ul.ementa li::before{ content:''; position:absolute; left:2px; top:7px; width:4px; height:4px; border-radius:50%; background:var(--acc); }
+  ul.ementa li em{ font-style:italic; }
+  ul.ementa li.bonus{ margin-top:2px; color:var(--muted); }
+  ul.ementa li.bonus::before{ background:var(--gold); }
+  .enc{ font-weight:700; color:var(--ink); }
+</style>
+</head>
+<body>
+  <table>
+    <colgroup>
+      <col class="c-tema"><col class="c-icp"><col class="c-mkt"><col class="c-preco">
+      <col class="c-em"><col class="c-em"><col class="c-em">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Tema do curso</th>
+        <th>ICP</th>
+        <th>Tamanho de mercado <span class="fmt">Brasil</span></th>
+        <th>Faixa de preço</th>
+        <th>Ementa <span class="fmt">Workshop ao vivo · 2h</span></th>
+        <th>Ementa <span class="fmt">Curso gravado · 2h</span></th>
+        <th>Ementa <span class="fmt">Programa ao vivo · 4 × 2h</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- EXEMPLO de uma linha (duplique e preencha; troque r1 por r2/r3/r4) -->
+      <tr class="r1">
+        <td class="tema">
+          <span class="name">Nome do Curso</span>
+          <span class="sub">Subtítulo / promessa</span>
+        </td>
+        <td class="icp">Perfil específico de comprador.</td>
+        <td class="mkt">Faixa + proxy <strong>número</strong> <em>(conf. X)</em>; sinais de demanda com fonte.</td>
+        <td class="preco">
+          <span class="row"><span class="lbl">Workshop</span><span class="val">R$ ...</span></span>
+          <span class="row"><span class="lbl">Gravado</span><span class="val">R$ ...</span></span>
+          <span class="row"><span class="lbl">Programa</span><span class="val">R$ ...</span></span>
+          <span class="row"><span class="note">nota opcional (ex.: in-company)</span></span>
+        </td>
+        <td><ul class="ementa">
+          <li>Bloco 1</li><li>Bloco 2</li><li>Bloco 3</li><li>Diagnóstico + Q&amp;A</li>
+        </ul></td>
+        <td><ul class="ementa">
+          <li>Módulo 1</li><li>Módulo 2</li><li>Módulo 3</li><li>Módulo 4</li>
+          <li class="bonus">Bônus: entregável</li>
+        </ul></td>
+        <td><ul class="ementa">
+          <li><span class="enc">E1</span> Encontro 1</li>
+          <li><span class="enc">E2</span> Encontro 2</li>
+          <li><span class="enc">E3</span> Encontro 3</li>
+          <li><span class="enc">E4</span> Encontro 4 <em>(entrega)</em></li>
+        </ul></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
