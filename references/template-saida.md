@@ -25,29 +25,24 @@ finalistas + os que ficaram no limite do corte.
 Feche com uma linha explicando o corte: _"Mostro 3 — top-3 todos ≥ 4,0 e distintos entre si"_ /
 _"Mostro 2 — gap de 1,2 ponto para o 3º"_ / _"Mostro 4 — empate forte no topo"_.
 
-## 2. Tabela final de sugestões
+## 2. Tabela final de sugestões (SEMPRE em tabela única)
 
-Uma linha por curso, exatamente estas colunas:
+> **Regra fixa:** a saída final é **uma única tabela**, uma linha por curso, com as três ementas
+> dentro das células. Nada de "tabela-resumo + seções separadas" — o usuário quer comparar os cursos
+> lado a lado, e isso só funciona com tudo na mesma tabela. Estas colunas, exatamente e nesta ordem:
 
 ```markdown
 | Tema do curso | ICP | Tamanho de mercado (Brasil) | Faixa de preço | Ementa — Workshop ao vivo (2h) | Ementa — Curso gravado (2h) | Ementa — Programa ao vivo (4×2h) |
 |---|---|---|---|---|---|---|
 ```
 
-Como as tabelas markdown ficam apertadas com 3 ementas longas dentro, o padrão preferido é:
-**tabela-resumo** (Tema · ICP · Tamanho · Preço) **seguida de uma seção por curso** com as três
-ementas em blocos legíveis (usando os templates de [formatos-produto.md](formatos-produto.md)).
+Para manter as ementas legíveis dentro da célula, use **`<br>`** entre os itens e um marcador curto
+(`•` ou `E1/E2/...`). Cada item deve ser uma linha enxuta — título do bloco/módulo/encontro, não um
+parágrafo. Exemplo de célula de workshop:
+`• Os medos não-ditos do fundador<br>• Os 3 patrimônios: família, sociedade, gestão<br>• Caso real: reestruturação sem litígio<br>• Diagnóstico + Q&A`
 
-```markdown
-### Sugestão 1 — <Tema do curso>
-- **ICP:** <perfil específico de comprador>
-- **Tamanho de mercado (Brasil):** <faixa + proxy + confiança>
-- **Faixa de preço:** <workshop / gravado / programa, em BRL>
-
-**Workshop ao vivo (2h)** … (blocos)
-**Curso gravado (~2h)** … (módulos)
-**Programa ao vivo (4×2h)** … (encontros)
-```
+A **tabela de scoring** (seção 1) também é tabela — então toda a entrega é comparável em formato de
+tabela do começo ao fim.
 
 ### Orientações por coluna
 - **Tema do curso** — nome comercial forte, específico e vendável. Nada genérico.
