@@ -77,9 +77,16 @@ Skill-ClassesBuilder/
 ├── references/                       # carregadas sob demanda
 │   ├── metodologia-analise.md        # Fase 1 — ler transcrição, inferir com evidência, dossiê
 │   ├── catalogo-temas.md             # Fase 2 — motor combinatório + taxonomia + benchmarking
-│   ├── criterios-comerciais.md       # Fase 3 — rubrica de scoring, sizing BR, protocolo de pesquisa
+│   ├── criterios-comerciais.md       # Fase 3 — scoring, TAM/SAM/SOM, Público Meta Ads, Score final
+│   ├── base-mercado.md               # Fase 3 — base de mercado viva (datada; calibra entre casos)
 │   ├── formatos-produto.md           # Fase 4 — os 3 formatos fixos + templates de ementa
-│   └── template-saida.md             # Fase 4 — formato exato da saída
+│   ├── template-saida.md             # Fase 4 — formato exato da saída (tabela única, 9 colunas)
+│   ├── saida-pdf.md                  # Fase 4 — gerar o PDF da tabela (Montserrat, 1 página)
+│   └── pecas-marketing.md            # Fase 4 — peça de divulgação + one-pager (identidade snaq)
+├── assets/                           # templates HTML → PDF/PNG
+│   ├── tabela-template.html          # tabela final de cursos
+│   ├── peca-divulgacao-template.html # peça social 1080×1350
+│   └── one-pager-template.html       # one-pager de venda A4
 └── pessoas/
     └── _template/                    # modelo de caso (único versionado; casos reais no .gitignore)
 ```
