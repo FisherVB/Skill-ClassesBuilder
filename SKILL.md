@@ -98,6 +98,8 @@ que melhor servir o entrevistado).
 → Formato exato da saída (tabela única) em [references/template-saida.md](references/template-saida.md).
 → Além da tabela em markdown, **gere sempre o PDF** da tabela (Montserrat, uma página, bem espaçado) —
   ver [references/saida-pdf.md](references/saida-pdf.md) e o template [assets/tabela-template.html](assets/tabela-template.html).
+→ Sob demanda, gere **peças de marketing por curso** na identidade snaq (peça de divulgação social +
+  one-pager de venda) — ver [references/pecas-marketing.md](references/pecas-marketing.md).
 
 ## Perguntas de aprofundamento (quando rodar no chat)
 
