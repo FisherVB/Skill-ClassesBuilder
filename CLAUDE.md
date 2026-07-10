@@ -77,6 +77,7 @@ _(default inicial — soma 1,00)_
 | Data | De → Para (wA/wD/wM/wE) | Motivo (que padrão de escolha) |
 |---|---|---|
 | 2026-07-10 | — (default 0,30/0,30/0,20/0,20) | pesos iniciais |
+| 2026-07-10 | mantido | 1º caso (Ricardo Catto): usuário escolheu mercado-primeiro → coincidiu com o default; sem ajuste |
 
 > Enquanto houver poucos casos, os pesos ficam no default. A cada professor, o skill **anota** se a
 > escolha do usuário bateu com o score; quando o padrão ficar claro, ajusta. Alinhamento de
