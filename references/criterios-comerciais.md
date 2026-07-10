@@ -88,14 +88,27 @@ Use como ponto de partida e **ajuste com a pesquisa de concorrência** de cada t
 são preenchidas/atualizadas com os dados da pesquisa de mercado em
 [catalogo-temas.md](catalogo-temas.md).
 
-| Formato | Faixa típica (BRL) | Observações |
-|---|---|---|
-| Workshop ao vivo (~2h) | (validar por pesquisa) | Ticket de entrada; ótimo para topo de funil e lista |
-| Curso gravado (~2h) | (validar por pesquisa) | Escalável, ticket baixo/médio, margem alta |
-| Programa ao vivo (4×2h) | (validar por pesquisa) | Ticket mais alto; cohort/turma; permite B2B/in-company |
+Faixas trianguladas por benchmarking (jul/2026) — ver detalhamento e fontes em
+[catalogo-temas.md](catalogo-temas.md). Confiança: média (mercado fragmentado).
 
-> Sempre que a pesquisa trouxer números concretos de concorrentes, prefira-os a estas faixas
-> genéricas. B2B/in-company costuma multiplicar o ticket — sinalize quando aplicável.
+| Formato | Faixa plausível (BRL) | Sweet spot | Observações |
+|---|---|---|---|
+| Workshop ao vivo (~2h) | R$ 47 – 497 | R$ 97–297 | Ticket de entrada; topo de funil e captação de lista |
+| Curso gravado (~2h) | R$ 27 – 297 | R$ 47–97 (ou incluso em assinatura) | Escalável, margem alta, sem custo marginal |
+| Programa ao vivo (4×2h) | R$ 1.500 – 6.000 | ~R$ 2–4k | Cohort/turma; high-ticket de nicho pode passar de R$ 10k; ideal p/ B2B/in-company |
+
+Âncoras de infoproduto BR: low ticket < R$ 97 · mid ~R$ 297–2.000 · high > R$ 2.000. Imersão
+executiva presencial R$ 10–25k+ (StartSe R$ 18.500; ticket G4 Learning ~R$ 25k).
+
+> Sempre prefira o preço real de um concorrente direto do tema (via pesquisa) a estas faixas
+> genéricas. **B2B/in-company multiplica o ticket** — sinalize quando o tema permitir venda corporativa.
+
+### Proxies rápidos de sizing (Brasil, jul/2026)
+Âncoras iniciais de universo por vertical/função (refine com LinkedIn audience + IBGE CEMPRE/RAIS):
+advogados **1,3 mi** (OAB) · médicos **~635 mil** (CFM) · contadores **~539 mil** (CFC) · fintechs
+**~1,7–2,1 mil** · corretoras de seguros **~65 mil** (Susep) · agtechs **~2 mil** · demanda TIC
+**~159 mil/ano** (Brasscom). Para função (PM, growth, vendas): use LinkedIn Campaign Manager /
+Sales Navigator como censo funcional. Sempre triangule por dois caminhos e reporte faixa + confiança.
 
 ## Saída da fase
 
