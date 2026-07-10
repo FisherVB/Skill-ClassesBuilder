@@ -58,8 +58,9 @@ usuário usa para comparar lado a lado. Procedimento e template em [saida-pdf.md
 - **Faixa de preço** — plausível para o mercado brasileiro, por formato; ancorada na concorrência.
 - **Ementas** — seguindo os templates de [formatos-produto.md](formatos-produto.md); específicas,
   puxando os métodos e casos raros do dossiê.
-- **Score final** — composto 0–5 (número + banda Forte/Bom/Fraco), com **⚑** se estiver fora do
-  posicionamento atual da pessoa. Fórmula em [criterios-comerciais.md](criterios-comerciais.md).
+- **Score final** — composto 0–5 (número + banda Forte/Bom/Fraco). Pesos vivem no [CLAUDE.md](../CLAUDE.md)
+  e são calibrados ao longo dos casos. Alinhamento de posicionamento já entra pela Autoridade (real +
+  atual) — sem flag. Fórmula em [criterios-comerciais.md](criterios-comerciais.md).
 
 ## 3. Estrutura do portfólio
 

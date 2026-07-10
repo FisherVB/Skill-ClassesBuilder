@@ -7,11 +7,14 @@ Referência carregada na **Fase 3**. Define a rubrica de pontuação, o protocol
 
 Pontue cada tema candidato da long-list em quatro eixos. Some com pesos para o score composto.
 
-### 1. Autoridade (peso 30%)
-Quão forte é o lastro do entrevistado neste tema específico?
-- **5** — experiência rara, executada, com resultado e método próprio; poucos no país ensinariam melhor
-- **3** — domínio sólido e comprovado, mas não excepcional/único
-- **1** — sabe o suficiente, mas evidência rasa (competência 🟡/⚪ no dossiê)
+### 1. Autoridade (peso: ver CLAUDE.md)
+Quão forte é o lastro do entrevistado **e quão alinhado ao que ele realmente é/quer ser hoje**?
+Autoridade aqui é **real + atual**: não basta ter feito no passado — pesa se é onde o posicionamento
+e a identidade atual da pessoa estão (o que os materiais mais recentes mostram que ela quer levar ao
+mercado). É por aqui que o "alinhamento de posicionamento" entra no **score** — sem flag paralela.
+- **5** — experiência rara, executada, com método próprio **e** é o centro do posicionamento atual dela
+- **3** — domínio sólido e comprovado, mas **adjacente** ao foco atual (sabe fazer, não é onde ela quer atuar)
+- **1** — evidência rasa (🟡/⚪) ou claramente fora da identidade atual
 - **0** — sem lastro real (não deveria ter chegado até aqui)
 
 ### 2. Demanda (peso 30%)
@@ -115,17 +118,16 @@ Como derivar:
 
 ## Score final (metodologia)
 
-**Score final = 0,30·Autoridade + 0,30·Demanda + 0,20·Monetização + 0,20·Escala** (escala 0–5, cada
-eixo pontuado pela rubrica acima). É o número que ordena os candidatos e aparece na **coluna "Score
-final"** da tabela. Bandas de leitura: **≥ 4,3 Forte · 3,5–4,2 Bom · < 3,5 Fraco**.
+**Score final = wA·Autoridade + wD·Demanda + wM·Monetização + wE·Escala** (escala 0–5). Os **pesos
+`wA/wD/wM/wE` vivem no [CLAUDE.md](../CLAUDE.md)** e **não são fixos**: começam num default e vão
+sendo **calibrados** conforme rodamos vários professores, para refletir onde o usuário quer chegar.
+Use sempre os pesos atuais do CLAUDE.md. É o número que ordena os candidatos e aparece na **coluna
+"Score final"**. Bandas: **≥ 4,3 Forte · 3,5–4,2 Bom · < 3,5 Fraco** (recalibre as bandas se os pesos mudarem).
 
-**Ajuste de alinhamento de posicionamento (flag, não recálculo).** Depois de calcular o score bruto,
-verifique se o tema está **dentro do posicionamento/autoridade central atual** da pessoa (o que os
-materiais mais recentes mostram que ela quer/está fazendo). Se um tema de **score alto** estiver
-**fora** desse foco, **não o rebaixe no número** — mas marque-o com **⚑ fora de posicionamento** e
-trate-o como **opção/swap**, não como recomendação automática do portfólio. A seleção final (Fase 4)
-pondera score **e** alinhamento; explique sempre o trade-off. (Ex.: Ricardo — Governança Familiar
-score 4,5 porém ⚑ fora de posicionamento → swap, não top-3.)
+**Alinhamento resolve-se no próprio score, não com flag.** Um tema de alta demanda mas fora do
+posicionamento atual da pessoa **já cai** porque a **Autoridade** (real + atual) o penaliza. Não use
+regra/flag paralela: se o usuário sistematicamente prefere/rejeita certos perfis de tema, isso é sinal
+para **ajustar os pesos** (loop de calibração no CLAUDE.md) — não para criar exceções ad-hoc.
 
 ## Mapa de concorrência e whitespace (por tema)
 

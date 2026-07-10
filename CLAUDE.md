@@ -53,6 +53,35 @@ processo, não só no fim.
   final com a justificativa do corte (Fase 4). É o **log de decisão** daquela pessoa: por que esses
   cursos, e não outros.
 
+## Calibração dos pesos do scoring (aprendizado)
+
+O **Score final** (ver `references/criterios-comerciais.md`) é `wA·Autoridade + wD·Demanda +
+wM·Monetização + wE·Escala`. Os pesos abaixo são a **fonte da verdade** e **evoluem** conforme rodamos
+professores — é assim que o skill aprende **onde o usuário quer cair**, sem heurísticas ad-hoc.
+
+### Pesos atuais
+| wA (Autoridade) | wD (Demanda) | wM (Monetização) | wE (Escala) |
+|:--:|:--:|:--:|:--:|
+| **0,30** | **0,30** | **0,20** | **0,20** |
+_(default inicial — soma 1,00)_
+
+### Loop de calibração (rodar ao fechar cada professor)
+1. Compare o **ranking do score** com a **escolha final** que o usuário validou.
+2. Se houver **divergência sistemática** (ex.: o usuário repetidamente prefere temas de mais autoridade/
+   alinhamento sobre temas de mais demanda/mercado, ou vice-versa), **proponha um ajuste pequeno** nos
+   pesos (passos de ~0,05, mantendo a soma = 1,00) que teria reproduzido a escolha dele.
+3. **Confirme com o usuário** antes de gravar. Ao gravar, **atualize a tabela acima** e registre no log.
+4. Não mude peso por causa de **um** caso isolado — só quando o padrão se repete (≥ 2–3 casos).
+
+### Log de calibração
+| Data | De → Para (wA/wD/wM/wE) | Motivo (que padrão de escolha) |
+|---|---|---|
+| 2026-07-10 | — (default 0,30/0,30/0,20/0,20) | pesos iniciais |
+
+> Enquanto houver poucos casos, os pesos ficam no default. A cada professor, o skill **anota** se a
+> escolha do usuário bateu com o score; quando o padrão ficar claro, ajusta. Alinhamento de
+> posicionamento entra pela **Autoridade** (real + atual), não por flag.
+
 ## Privacidade / versionamento
 
 - `pessoas/` contém material real de pessoas reais e **não é versionado** por padrão (ver `.gitignore`).
