@@ -78,9 +78,13 @@ uma competência real do dossiê. Prefira o específico e memorável ao genéric
 
 ### Fase 3 — Scoring comercial
 Pontue cada candidato numa rubrica 0–5 em quatro eixos — **Autoridade**, **Demanda**,
-**Monetização**, **Escala** — e calcule um score composto. Faça a pesquisa web aqui: valide
-demanda, mapeie concorrência, ancore sizing e preço. Marque nível de confiança.
-→ Rubrica, pesos e protocolo de pesquisa em [references/criterios-comerciais.md](references/criterios-comerciais.md).
+**Monetização**, **Escala** — e calcule o **Score final** (composto ponderado). Faça a pesquisa web
+aqui: valide demanda, **mapeie concorrência e whitespace**, ancore preço, e dimensione o mercado em
+**TAM/SAM/SOM** (números finais em negrito). Derive o **Público Meta Ads** do ICP (também valida o
+sizing). Marque nível de confiança. Aplique a **flag de alinhamento de posicionamento** (⚑) a temas de
+score alto fora do foco atual da pessoa. Antes de pesquisar do zero, **consulte** e depois **atualize**
+a [references/base-mercado.md](references/base-mercado.md).
+→ Rubrica, pesos, sizing TAM/SAM/SOM, Público Meta Ads, Score final e protocolo em [references/criterios-comerciais.md](references/criterios-comerciais.md).
 
 ### Fase 4 — Seleção e saída
 A quantidade de sugestões é **decidida pelo score, não fixa**. Padrão: 3. Mas se a
@@ -94,6 +98,15 @@ que melhor servir o entrevistado).
 → Formato exato da saída (tabela única) em [references/template-saida.md](references/template-saida.md).
 → Além da tabela em markdown, **gere sempre o PDF** da tabela (Montserrat, uma página, bem espaçado) —
   ver [references/saida-pdf.md](references/saida-pdf.md) e o template [assets/tabela-template.html](assets/tabela-template.html).
+
+## Perguntas de aprofundamento (quando rodar no chat)
+
+Quando um tema promissor tiver **evidência rasa** (competência 🟡/🔵 ou demanda incerta), e o skill
+estiver rodando **interativamente no chat** (ex.: Claude Desktop), **pergunte ao usuário ali mesmo**
+para fortalecer o dossiê antes de finalizar — em vez de só registrar a lacuna. Foque nas perguntas que
+mais mudam o scoring (o que comprova autoridade num tema de alta demanda; qual o posicionamento atual
+da pessoa; que material adicional existe). Rodando em modo não-interativo (batch), registre as
+perguntas como lacunas no `dossie.md`.
 
 ## Workspace e histórico
 

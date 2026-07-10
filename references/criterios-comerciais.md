@@ -64,23 +64,78 @@ Sempre cite as URLs. Marque **nível de confiança** (Alto / Médio / Baixo) em 
 depender de estimativa. Se não achar dado, diga que não achou e use um proxy explícito — nunca
 invente número.
 
-## Método de sizing de mercado (Brasil)
+## Método de sizing — TAM / SAM / SOM (metodologia fixa)
 
-Estime de forma **defensável**, combinando quantitativo + qualitativo. Lógica ICP → TAM/SAM:
+Estime **sempre** em três níveis, cada um com o **número final em negrito**. É uma metodologia básica
+mas **consistente entre casos** — o objetivo é comparabilidade, não precisão de consultoria. Cada
+nível é um funil sobre o anterior, com os multiplicadores **declarados explicitamente**.
 
-1. **Defina o ICP** com precisão (cargo + senioridade + tipo/porte de empresa + setor).
-2. **Ache um proxy de população** do ICP no Brasil. Fontes/proxies úteis:
-   - LinkedIn (nº de profissionais por cargo/localização — usar busca com filtros como proxy)
-   - Dados setoriais e de associações (ex.: nº de clínicas, corretoras, fintechs, agências)
-   - Nº de empresas por porte/CNAE (IBGE, dados de mercado)
-   - Volume de comunidades/eventos do nicho
-3. **Aplique funil realista:** TAM (todos do ICP) → SAM (os que buscam se capacitar/têm budget) →
-   fatia capturável num lançamento. Seja explícito nas taxas de conversão assumidas.
-4. **Complemente com qualitativo:** o tema está crescendo? é urgente/dor real? tem gatilho de
-   mercado (nova tecnologia, regulação, hype)?
-5. **Entregue como faixa + nota de confiança**, não como número cravado. Ex.: "~15–40 mil PMs em
-   empresas de tech no Brasil (proxy LinkedIn, confiança Média); SAM plausível de alguns milhares
-   com disposição a pagar por formação em IA aplicada a produto."
+**Passo 0 — ICP em uma frase:** cargo + senioridade + tipo/porte de empresa + setor.
+
+**TAM — universo total do ICP no Brasil.** Proxy de população do ICP inteiro. Fontes/proxies:
+- Conselhos de classe (exato p/ verticais regulados): OAB 1,3 mi advogados, CFM ~635 mil médicos, CFC ~539 mil contadores.
+- LinkedIn Campaign Manager / Sales Navigator (censo funcional por cargo+senioridade+localização).
+- IBGE CEMPRE/RAIS (nº de empresas por porte/CNAE) quando o comprador é B2B/empresa.
+- Associações setoriais (nº de fintechs, corretoras, agtechs, clínicas...).
+→ Reporte o **TAM em negrito** (faixa) + fonte + confiança. Ex.: **~50–120 mil** líderes C-level.
+
+**SAM — mercado endereçável.** TAM × filtros de realismo, **cada corte nomeado**: geografia atendida,
+senioridade/renda que compra o preço-alvo, setores-alvo, e **propensão a se capacitar** (proxy:
+penetração de players como PM3/Alura/IBGC na função). Ex.: TAM 120k × 60% sêniores × 50% em setores-alvo
+= **SAM ~36 mil**.
+
+**SOM — obtível em 12–18 meses.** SAM × taxa de captura realista de um curso novo (tipicamente
+**0,5%–3%**). Ex.: SAM 36k × 1,5% = **SOM ~540 alunos/ciclo**. Cross-check bottom-up: alcance de canais
+(orgânico + mídia paga) × conversão × ticket deve bater na mesma ordem de grandeza.
+
+**Regras de saída (para a célula "Tamanho de mercado"):**
+- Três linhas: **TAM**, **SAM**, **SOM** — número final de cada em **negrito**, com o multiplicador ao lado.
+- Marque a **confiança** de cada nível (o SOM quase sempre é o mais incerto).
+- **Triangule com o Público Meta Ads** (abaixo): o tamanho de audiência estimado da Meta é um
+  segundo caminho para validar TAM/SAM — se divergir muito do proxy, sinalize.
+- Complemente com qualitativo (crescimento? urgência? gatilho de mercado?).
+
+## Público Meta Ads (derivar do ICP)
+
+Logo depois do ICP, liste **interesses/segmentações da Meta (Facebook/Instagram Ads)** que alcançariam
+esse público — serve para (a) operacionalizar a mídia paga e (b) **validar o sizing** (o estimador de
+audiência do Gerenciador de Anúncios é um proxy independente de TAM/SAM).
+
+Como derivar:
+- A Meta **não** segmenta por cargo de forma confiável no Brasil → mire em **interesses, páginas,
+  comportamentos e formação** correlacionados ao ICP.
+- Traduza cada traço do ICP em 1–2 interesses concretos e **acionáveis na plataforma** (nomes que
+  existem no Gerenciador). Ex.: fundador → "Empreendedorismo", "Pequenas e médias empresas",
+  "Startup company"; líder de IA → "Inteligência artificial", "ChatGPT", "Automação"; executivo →
+  "Liderança", "Harvard Business Review", "Endeavor", "StartSe".
+- Combine **interesse + comportamento** (ex.: "administradores de página de empresa", "donos de
+  pequenas empresas") para afunilar.
+- Liste **5–8 segmentações** na célula, priorizando as mais específicas. Anote o **tamanho de
+  audiência estimado** quando puder consultar, e use-o para cruzar com o SAM.
+
+## Score final (metodologia)
+
+**Score final = 0,30·Autoridade + 0,30·Demanda + 0,20·Monetização + 0,20·Escala** (escala 0–5, cada
+eixo pontuado pela rubrica acima). É o número que ordena os candidatos e aparece na **coluna "Score
+final"** da tabela. Bandas de leitura: **≥ 4,3 Forte · 3,5–4,2 Bom · < 3,5 Fraco**.
+
+**Ajuste de alinhamento de posicionamento (flag, não recálculo).** Depois de calcular o score bruto,
+verifique se o tema está **dentro do posicionamento/autoridade central atual** da pessoa (o que os
+materiais mais recentes mostram que ela quer/está fazendo). Se um tema de **score alto** estiver
+**fora** desse foco, **não o rebaixe no número** — mas marque-o com **⚑ fora de posicionamento** e
+trate-o como **opção/swap**, não como recomendação automática do portfólio. A seleção final (Fase 4)
+pondera score **e** alinhamento; explique sempre o trade-off. (Ex.: Ricardo — Governança Familiar
+score 4,5 porém ⚑ fora de posicionamento → swap, não top-3.)
+
+## Mapa de concorrência e whitespace (por tema)
+
+Para cada finalista, monte um mini-mapa: **quem já vende isso no Brasil, a que preço, e como posiciona**.
+O objetivo é achar **whitespace** — ângulo com demanda mas sem oferta direta (foi o que destravou o
+melhor tema do caso Ricardo: todos vendem "use +IA", ninguém vende "preserve seu julgamento").
+- Liste 3–6 concorrentes (nome, formato, preço, ângulo).
+- Classifique o tema: **saturado** (muitos players no mesmo ângulo) / **disputado** / **whitespace**.
+- Whitespace real **sobe a nota de Escala/Demanda**; saturação sem diferencial **desce**.
+- Registre no `decisao.md` e alimente a [base-mercado.md](base-mercado.md).
 
 ## Faixas de preço (Brasil) por formato
 

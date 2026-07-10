@@ -4,50 +4,34 @@
 <meta charset="utf-8">
 <!--
   TEMPLATE da tabela final de cursos (PDF) — skill classes-builder.
-  Como usar:
-  1) Garanta a fonte Montserrat: instale em ~/Library/Fonts OU deixe Montserrat.ttf ao lado deste arquivo
-     (baixe de https://github.com/google/fonts/raw/main/ofl/montserrat/Montserrat%5Bwght%5D.ttf).
-  2) Preencha <tbody> com uma <tr> por curso (2 a 4 cursos), seguindo o exemplo comentado.
-     Classe da linha: r1/r2/r3/r4 define a cor do curso (teal/roxo/terracota/azul).
-  3) Ajuste a altura da página (@page size) para caber em 1 página — ver references/saida-pdf.md.
-  4) Renderize com Chrome headless --print-to-pdf.
+  Colunas: Tema · ICP · Público Meta Ads · Tamanho (TAM/SAM/SOM) · Faixa de preço · 3 ementas · Score final.
+  Uso: garanta Montserrat (ver saida-pdf.md); preencha <tbody> (1 <tr class="rN"> por curso);
+  ajuste @page height ao conteúdo; renderize com Chrome headless --print-to-pdf.
 -->
 <style>
-  @font-face{
-    font-family:'Montserrat';
-    src:local('Montserrat'), url('Montserrat.ttf') format('truetype');
-    font-weight:100 900; font-display:swap;
-  }
-  /* Altura ajustada ao conteúdo — recalcular por caso (ver saida-pdf.md). Largura 390mm cabe 7 colunas. */
-  @page{ size:390mm 292mm; margin:16mm; }
+  @font-face{ font-family:'Montserrat'; src:local('Montserrat'), url('Montserrat.ttf') format('truetype'); font-weight:100 900; font-display:swap; }
+  @page{ size:520mm 300mm; margin:16mm; }   /* altura recalculada por caso — ver saida-pdf.md */
 
   :root{
     --ink:#14243B; --text:#2B3742; --muted:#71808C; --gold:#B98A44;
-    --hair:#E4E8EC; --hair-v:#EDF0F3; --cream:#F5F1E9;
+    --hair:#E4E8EC; --hair-v:#EDF0F3; --cream:#F5F1E9; --chip:#EEF1F4;
     --c1:#2F6F6A; --c2:#6E5A96; --c3:#B06A3B; --c4:#3A5A8C;
     --tint1:#F4F8F7; --tint2:#F7F5FA; --tint3:#FAF6F2; --tint4:#F3F6FB;
   }
   *{ box-sizing:border-box; }
   html,body{ margin:0; padding:0; }
-  body{ font-family:'Montserrat',-apple-system,sans-serif; color:var(--text);
-        -webkit-font-smoothing:antialiased; font-size:11px; line-height:1.5; }
+  body{ font-family:'Montserrat',-apple-system,sans-serif; color:var(--text); -webkit-font-smoothing:antialiased; font-size:11px; line-height:1.5; }
 
   table{ width:100%; border-collapse:collapse; table-layout:fixed; }
-  colgroup .c-tema{ width:10%; }
-  colgroup .c-icp{ width:12%; }
-  colgroup .c-mkt{ width:13.5%; }
-  colgroup .c-preco{ width:10.5%; }
-  colgroup .c-em{ width:18%; }
+  .c-tema{ width:8%; } .c-icp{ width:9%; } .c-meta{ width:11%; } .c-mkt{ width:12%; }
+  .c-preco{ width:8%; } .c-em{ width:13.5%; } .c-score{ width:6.5%; }
 
-  thead th{ background:var(--ink); color:var(--cream); text-align:left; font-weight:600;
-    font-size:10px; letter-spacing:.10em; text-transform:uppercase; padding:15px 16px;
-    border-right:1px solid rgba(255,255,255,.08); vertical-align:middle; }
+  thead th{ background:var(--ink); color:var(--cream); text-align:left; font-weight:600; font-size:10px;
+    letter-spacing:.10em; text-transform:uppercase; padding:15px 14px; border-right:1px solid rgba(255,255,255,.08); vertical-align:middle; }
   thead th:last-child{ border-right:none; }
-  thead th .fmt{ display:block; font-size:8.5px; font-weight:500; letter-spacing:.06em;
-    color:var(--gold); margin-top:3px; text-transform:none; }
+  thead th .fmt{ display:block; font-size:8.5px; font-weight:500; letter-spacing:.06em; color:var(--gold); margin-top:3px; text-transform:none; }
 
-  tbody td{ vertical-align:top; padding:20px 16px; border-bottom:1px solid var(--hair);
-    border-right:1px solid var(--hair-v); }
+  tbody td{ vertical-align:top; padding:18px 14px; border-bottom:1px solid var(--hair); border-right:1px solid var(--hair-v); }
   tbody td:last-child{ border-right:none; }
   tbody tr:last-child td{ border-bottom:none; }
 
@@ -56,71 +40,89 @@
   tr.r1 td.tema{ background:var(--tint1); } tr.r2 td.tema{ background:var(--tint2); }
   tr.r3 td.tema{ background:var(--tint3); } tr.r4 td.tema{ background:var(--tint4); }
 
-  .tema .name{ display:block; font-weight:700; font-size:15px; line-height:1.25; color:var(--ink); letter-spacing:-.01em; }
-  .tema .sub{ display:block; margin-top:5px; font-weight:500; font-size:11px; color:var(--muted); line-height:1.35; }
+  .tema .name{ display:block; font-weight:700; font-size:14px; line-height:1.25; color:var(--ink); letter-spacing:-.01em; }
+  .tema .sub{ display:block; margin-top:5px; font-weight:500; font-size:10.5px; color:var(--muted); line-height:1.35; }
   .icp{ font-weight:500; }
-  .mkt strong{ font-weight:700; color:var(--ink); }
-  .mkt em,.note{ font-style:italic; color:var(--muted); font-size:10px; }
+
+  /* Público Meta Ads — chips */
+  .tags{ display:flex; flex-wrap:wrap; gap:4px; }
+  .tags .tag{ font-size:9px; background:var(--chip); color:#3A4652; border-radius:20px; padding:3px 9px; white-space:nowrap; font-weight:500; }
+  .tags .note{ display:block; width:100%; margin-top:4px; font-style:italic; color:var(--muted); font-size:9px; }
+
+  /* Tamanho — TAM/SAM/SOM */
+  .mkt .lvl{ display:block; padding:4px 0; }
+  .mkt .lvl + .lvl{ border-top:1px solid var(--hair); }
+  .mkt .lbl{ font-size:8.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:700; }
+  .mkt .val{ font-weight:500; }
+  .mkt .val b{ font-weight:700; color:var(--ink); }
+  .mkt .q{ display:block; margin-top:6px; font-style:italic; color:var(--muted); font-size:9px; }
+
   .preco .row{ display:block; padding:3px 0; }
   .preco .row + .row{ border-top:1px solid var(--hair); }
   .preco .lbl{ display:block; font-size:8.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); font-weight:600; }
-  .preco .val{ display:block; font-weight:600; color:var(--ink); font-size:11.5px; }
+  .preco .val{ display:block; font-weight:600; color:var(--ink); font-size:11px; }
+  .preco .note{ font-style:italic; color:var(--muted); font-size:9px; }
 
   ul.ementa{ list-style:none; margin:0; padding:0; }
-  ul.ementa li{ position:relative; padding-left:15px; margin-bottom:8px; }
+  ul.ementa li{ position:relative; padding-left:14px; margin-bottom:7px; }
   ul.ementa li:last-child{ margin-bottom:0; }
   ul.ementa li::before{ content:''; position:absolute; left:2px; top:7px; width:4px; height:4px; border-radius:50%; background:var(--acc); }
   ul.ementa li em{ font-style:italic; }
   ul.ementa li.bonus{ margin-top:2px; color:var(--muted); }
   ul.ementa li.bonus::before{ background:var(--gold); }
   .enc{ font-weight:700; color:var(--ink); }
+
+  /* Score final */
+  .score{ text-align:center; }
+  .score .num{ font-size:24px; font-weight:700; color:var(--acc); line-height:1; }
+  .score .max{ font-size:11px; color:var(--muted); font-weight:600; }
+  .score .band{ display:block; margin-top:5px; font-size:9px; text-transform:uppercase; letter-spacing:.06em; font-weight:700; color:var(--muted); }
+  .score .flag{ display:block; margin-top:7px; font-size:9px; color:var(--gold); font-weight:600; line-height:1.3; }
 </style>
 </head>
 <body>
   <table>
     <colgroup>
-      <col class="c-tema"><col class="c-icp"><col class="c-mkt"><col class="c-preco">
-      <col class="c-em"><col class="c-em"><col class="c-em">
+      <col class="c-tema"><col class="c-icp"><col class="c-meta"><col class="c-mkt"><col class="c-preco">
+      <col class="c-em"><col class="c-em"><col class="c-em"><col class="c-score">
     </colgroup>
     <thead>
       <tr>
         <th>Tema do curso</th>
         <th>ICP</th>
-        <th>Tamanho de mercado <span class="fmt">Brasil</span></th>
+        <th>Público Meta Ads</th>
+        <th>Tamanho de mercado <span class="fmt">Brasil · TAM / SAM / SOM</span></th>
         <th>Faixa de preço</th>
-        <th>Ementa <span class="fmt">Workshop ao vivo · 2h</span></th>
-        <th>Ementa <span class="fmt">Curso gravado · 2h</span></th>
-        <th>Ementa <span class="fmt">Programa ao vivo · 4 × 2h</span></th>
+        <th>Ementa <span class="fmt">Workshop · 2h</span></th>
+        <th>Ementa <span class="fmt">Gravado · 2h</span></th>
+        <th>Ementa <span class="fmt">Programa · 4 × 2h</span></th>
+        <th>Score <span class="fmt">final · /5</span></th>
       </tr>
     </thead>
     <tbody>
-      <!-- EXEMPLO de uma linha (duplique e preencha; troque r1 por r2/r3/r4) -->
+      <!-- EXEMPLO (duplique; troque r1 por r2/r3/r4) -->
       <tr class="r1">
-        <td class="tema">
-          <span class="name">Nome do Curso</span>
-          <span class="sub">Subtítulo / promessa</span>
-        </td>
+        <td class="tema"><span class="name">Nome do Curso</span><span class="sub">Subtítulo / promessa</span></td>
         <td class="icp">Perfil específico de comprador.</td>
-        <td class="mkt">Faixa + proxy <strong>número</strong> <em>(conf. X)</em>; sinais de demanda com fonte.</td>
+        <td><div class="tags">
+          <span class="tag">Interesse A</span><span class="tag">Interesse B</span><span class="tag">Comportamento C</span>
+          <span class="note">validar audiência no Gerenciador</span>
+        </div></td>
+        <td class="mkt">
+          <span class="lvl"><span class="lbl">TAM</span> <span class="val"><b>~X mil</b> — universo</span></span>
+          <span class="lvl"><span class="lbl">SAM</span> <span class="val"><b>~Y mil</b> — × filtros</span></span>
+          <span class="lvl"><span class="lbl">SOM</span> <span class="val"><b>~Z / ciclo</b> — × captura</span></span>
+          <span class="q">qualitativo + confiança</span>
+        </td>
         <td class="preco">
           <span class="row"><span class="lbl">Workshop</span><span class="val">R$ ...</span></span>
           <span class="row"><span class="lbl">Gravado</span><span class="val">R$ ...</span></span>
           <span class="row"><span class="lbl">Programa</span><span class="val">R$ ...</span></span>
-          <span class="row"><span class="note">nota opcional (ex.: in-company)</span></span>
         </td>
-        <td><ul class="ementa">
-          <li>Bloco 1</li><li>Bloco 2</li><li>Bloco 3</li><li>Diagnóstico + Q&amp;A</li>
-        </ul></td>
-        <td><ul class="ementa">
-          <li>Módulo 1</li><li>Módulo 2</li><li>Módulo 3</li><li>Módulo 4</li>
-          <li class="bonus">Bônus: entregável</li>
-        </ul></td>
-        <td><ul class="ementa">
-          <li><span class="enc">E1</span> Encontro 1</li>
-          <li><span class="enc">E2</span> Encontro 2</li>
-          <li><span class="enc">E3</span> Encontro 3</li>
-          <li><span class="enc">E4</span> Encontro 4 <em>(entrega)</em></li>
-        </ul></td>
+        <td><ul class="ementa"><li>Bloco 1</li><li>Bloco 2</li><li>Diagnóstico + Q&amp;A</li></ul></td>
+        <td><ul class="ementa"><li>Módulo 1</li><li>Módulo 2</li><li class="bonus">Bônus</li></ul></td>
+        <td><ul class="ementa"><li><span class="enc">E1</span> ...</li><li><span class="enc">E4</span> ... <em>(entrega)</em></li></ul></td>
+        <td class="score"><span class="num">4,3</span><span class="max">/5</span><span class="band">Forte</span><span class="flag">⚑ fora de posicionamento</span></td>
       </tr>
     </tbody>
   </table>

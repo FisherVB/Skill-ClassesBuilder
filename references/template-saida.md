@@ -32,8 +32,8 @@ _"Mostro 2 — gap de 1,2 ponto para o 3º"_ / _"Mostro 4 — empate forte no to
 > lado a lado, e isso só funciona com tudo na mesma tabela. Estas colunas, exatamente e nesta ordem:
 
 ```markdown
-| Tema do curso | ICP | Tamanho de mercado (Brasil) | Faixa de preço | Ementa — Workshop ao vivo (2h) | Ementa — Curso gravado (2h) | Ementa — Programa ao vivo (4×2h) |
-|---|---|---|---|---|---|---|
+| Tema do curso | ICP | Público Meta Ads | Tamanho de mercado (TAM/SAM/SOM) | Faixa de preço | Ementa — Workshop (2h) | Ementa — Gravado (2h) | Ementa — Programa (4×2h) | Score final |
+|---|---|---|---|---|---|---|---|---|
 ```
 
 Para manter as ementas legíveis dentro da célula, use **`<br>`** entre os itens e um marcador curto
@@ -51,11 +51,15 @@ usuário usa para comparar lado a lado. Procedimento e template em [saida-pdf.md
 ### Orientações por coluna
 - **Tema do curso** — nome comercial forte, específico e vendável. Nada genérico.
 - **ICP** — perfil específico de comprador (cargo + senioridade + tipo/porte de empresa + setor).
-- **Tamanho de mercado (Brasil)** — quantitativo (faixa + proxy) **e** qualitativo (crescimento/urgência),
-  com nível de confiança. Método em [criterios-comerciais.md](criterios-comerciais.md).
+- **Público Meta Ads** — 5–8 interesses/comportamentos acionáveis no Gerenciador da Meta, derivados do
+  ICP; também valida o sizing. Método em [criterios-comerciais.md](criterios-comerciais.md).
+- **Tamanho de mercado (TAM/SAM/SOM)** — três níveis, **número final de cada em negrito**, com o
+  multiplicador ao lado + confiança + uma linha qualitativa. Metodologia em [criterios-comerciais.md](criterios-comerciais.md).
 - **Faixa de preço** — plausível para o mercado brasileiro, por formato; ancorada na concorrência.
 - **Ementas** — seguindo os templates de [formatos-produto.md](formatos-produto.md); específicas,
   puxando os métodos e casos raros do dossiê.
+- **Score final** — composto 0–5 (número + banda Forte/Bom/Fraco), com **⚑** se estiver fora do
+  posicionamento atual da pessoa. Fórmula em [criterios-comerciais.md](criterios-comerciais.md).
 
 ## 3. Estrutura do portfólio
 
