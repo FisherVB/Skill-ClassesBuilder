@@ -1,0 +1,13 @@
+# Ignorar dados reais de pessoas — versionar só o template
+pessoas/*
+!pessoas/_template/
+!pessoas/_template/**
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# macOS
+.DS_Store
+
+# scratch
+*.tmp
