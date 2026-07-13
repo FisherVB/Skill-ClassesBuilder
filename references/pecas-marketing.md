@@ -22,13 +22,23 @@ ilustrar os criativos sociais — como as peças de referência da snaq trazem o
 - O **one-pager** pode ou não usar a foto (é documento; foto é opcional ali).
 - Sem foto disponível, gere as peças sem ela e sinalize que ficam melhores com o retrato.
 
+## Referência visual (fonte da verdade)
+
+As peças reais da snaq estão em [../assets/ref-assets/](../assets/ref-assets/) (`ref-asset1/2/3.png` —
+feed, story, feed). **Estude-as antes de gerar** e siga a identidade delas. O que elas confirmam:
+verde vibrante `#37E27C`; logo `snaq` (branco) + `I` (verde) + `A` (branco); título branco com **uma
+palavra-chave realçada em verde**; selo verde "ministrado por [nome] + foto"; cupom em fonte
+**monoespaçada**; botão CTA verde com ícone de cursor; fundo escuro (do quase-preto ao carvão) com
+leve brilho verde. **Fonte da marca: geométrica arredondada (tipo Poppins/Sofia)** — não usar fonte
+angular/técnica para os títulos.
+
 ## Identidade visual snaq (fixa)
 
 - **Fundo:** `#0E0F11` (quase preto). **Cards:** `#17181B`, borda `rgba(255,255,255,.08)`.
 - **Verde snaq:** `#37E27C` (principal) / `#4BEA8A` (botão CTA). Texto branco; cinza `#9AA1A8`.
-- **Fontes:** **Space Grotesk** (títulos/corpo, bold e geométrica) + **Space Mono** (cupom, números,
-  labels, cursor). Baixe de google/fonts (`ofl/spacegrotesk`, `ofl/spacemono`) e instale/coloque ao
-  lado do HTML — mesma lógica da Montserrat em [saida-pdf.md](saida-pdf.md).
+- **Fontes:** **Poppins** (títulos/corpo — geométrica arredondada, a cara da snaq; use pesos 600/700/800
+  nos títulos) + **Space Mono** (cupom, números, labels, cursor). Baixe de google/fonts (`ofl/poppins`,
+  `ofl/spacemono`) e instale/coloque ao lado do HTML — mesma lógica da Montserrat em [saida-pdf.md](saida-pdf.md).
 - **Logo:** aproximação `snaq` (branco) + `I` (verde) + `A` (branco). ⚑ **Trocar pelo SVG/logo oficial
   da snaq quando disponível** — o atual é aproximação.
 - **Regras de conteúdo (importantes):**

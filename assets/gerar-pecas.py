@@ -16,7 +16,11 @@ def fill(t,c):
     return t
 
 FONTS = """
- @font-face{ font-family:'Grotesk'; src:local('Space Grotesk'),url('SpaceGrotesk.ttf') format('truetype'); font-weight:300 700; }
+ @font-face{ font-family:'Grotesk'; src:local('Poppins'),url('Poppins-Regular.ttf') format('truetype'); font-weight:400; }
+ @font-face{ font-family:'Grotesk'; src:local('Poppins Medium'),url('Poppins-Medium.ttf') format('truetype'); font-weight:500; }
+ @font-face{ font-family:'Grotesk'; src:local('Poppins SemiBold'),url('Poppins-SemiBold.ttf') format('truetype'); font-weight:600; }
+ @font-face{ font-family:'Grotesk'; src:local('Poppins Bold'),url('Poppins-Bold.ttf') format('truetype'); font-weight:700; }
+ @font-face{ font-family:'Grotesk'; src:local('Poppins ExtraBold'),url('Poppins-ExtraBold.ttf') format('truetype'); font-weight:800; }
  @font-face{ font-family:'Mono'; src:local('Space Mono'),url('SpaceMono-Regular.ttf') format('truetype'); font-weight:400; }
  @font-face{ font-family:'Mono'; src:local('Space Mono'),url('SpaceMono-Bold.ttf') format('truetype'); font-weight:700; }
  :root{ --bg:#0E0F11; --card:#17181B; --line:rgba(255,255,255,.07); --green:#37E27C; --green2:#4BEA8A; --gray:#9AA1A8; --ink:#0B2C18; }
@@ -103,18 +107,18 @@ ONEP = """<!doctype html><html lang=pt-BR><head><meta charset=utf-8><style>"""+F
  .wrap{ padding:15mm 15mm 13mm; height:100%; display:flex; flex-direction:column; }
  .top{ display:flex; justify-content:space-between; align-items:center; }
  .logo{ font-weight:700; font-size:22px; letter-spacing:-.4px; } .logo .i{ color:var(--green); } .kick{ font-family:'Mono'; font-size:11px; color:var(--gray); letter-spacing:.14em; text-transform:uppercase; }
- h1{ font-weight:700; font-size:42px; line-height:1.0; letter-spacing:-1px; margin-top:18px; } .subt{ color:var(--green); font-size:19px; font-weight:600; margin-top:8px; }
- .prof{ display:flex; align-items:center; gap:10px; margin-top:12px; } .prof img{ width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid var(--green); } .prof span{ font-size:13px; color:#D7DBDF; } .prof b{ color:#fff; }
- .promise{ color:#D7DBDF; font-size:14.5px; line-height:1.5; margin-top:12px; max-width:170mm; }
- .datastrip{ margin-top:15px; background:var(--card); border:1px solid var(--line); border-left:3px solid var(--green); border-radius:12px; padding:14px 18px; display:flex; gap:20px; }
- .datastrip .d b{ color:var(--green); font-family:'Mono'; font-weight:700; font-size:19px; display:block; } .datastrip .d span{ color:var(--gray); font-size:11px; line-height:1.3; display:block; margin-top:2px; }
- .h2{ font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:.14em; color:var(--gray); margin:20px 0 11px; }
- .learn{ display:grid; grid-template-columns:1fr 1fr; gap:11px; }
- .learn .it{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:15px 17px; } .learn .n{ font-family:'Mono'; font-weight:700; color:var(--green); font-size:15px; } .learn .t{ font-weight:700; font-size:15.5px; margin:4px 0 5px; } .learn .p{ color:var(--gray); font-size:12px; line-height:1.4; }
- .formats{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:11px; }
- .fmt{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:15px; } .fmt .l{ font-family:'Mono'; font-size:10px; color:var(--gray); text-transform:uppercase; letter-spacing:.1em; } .fmt .n{ font-weight:700; font-size:14px; margin:4px 0 8px; } .fmt .pr{ color:var(--green); font-weight:700; font-size:19px; letter-spacing:-.5px; } .fmt .d{ color:var(--gray); font-size:11px; line-height:1.4; margin-top:6px; }
- .who{ margin-top:18px; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:15px 17px; } .who b{ font-size:13px; } .who p{ color:var(--gray); font-size:12.5px; line-height:1.5; margin-top:4px; }
- .cta{ margin-top:auto; background:var(--green2); border-radius:16px; padding:19px 26px; display:flex; align-items:center; justify-content:space-between; } .cta .t{ color:var(--ink); } .cta .t b{ display:block; font-size:15px; font-weight:600; } .cta .t .u{ font-size:23px; font-weight:700; font-style:italic; letter-spacing:-.5px; } .cta svg{ width:38px; height:38px; }
+ h1{ font-weight:800; font-size:35px; line-height:1.02; letter-spacing:-1px; margin-top:12px; } .subt{ color:var(--green); font-size:18px; font-weight:600; margin-top:6px; }
+ .prof{ display:flex; align-items:center; gap:10px; margin-top:9px; } .prof img{ width:38px; height:38px; border-radius:50%; object-fit:cover; border:2px solid var(--green); } .prof span{ font-size:12.5px; color:#D7DBDF; } .prof b{ color:#fff; }
+ .promise{ color:#D7DBDF; font-size:13.5px; line-height:1.45; margin-top:9px; max-width:170mm; }
+ .datastrip{ margin-top:11px; background:var(--card); border:1px solid var(--line); border-left:3px solid var(--green); border-radius:12px; padding:11px 16px; display:flex; gap:18px; }
+ .datastrip .d b{ color:var(--green); font-family:'Mono'; font-weight:700; font-size:18px; display:block; } .datastrip .d span{ color:var(--gray); font-size:10.5px; line-height:1.3; display:block; margin-top:2px; }
+ .h2{ font-weight:700; font-size:12.5px; text-transform:uppercase; letter-spacing:.14em; color:var(--gray); margin:14px 0 8px; }
+ .learn{ display:grid; grid-template-columns:1fr 1fr; gap:9px; }
+ .learn .it{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px 15px; } .learn .n{ font-family:'Mono'; font-weight:700; color:var(--green); font-size:14px; } .learn .t{ font-weight:700; font-size:14.5px; margin:3px 0 4px; } .learn .p{ color:var(--gray); font-size:11.5px; line-height:1.38; }
+ .formats{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:9px; }
+ .fmt{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px; } .fmt .l{ font-family:'Mono'; font-size:9.5px; color:var(--gray); text-transform:uppercase; letter-spacing:.1em; } .fmt .n{ font-weight:700; font-size:13.5px; margin:4px 0 7px; } .fmt .pr{ color:var(--green); font-weight:700; font-size:18px; letter-spacing:-.5px; } .fmt .d{ color:var(--gray); font-size:10.5px; line-height:1.38; margin-top:5px; }
+ .who{ margin-top:12px; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px 15px; } .who b{ font-size:12.5px; } .who p{ color:var(--gray); font-size:12px; line-height:1.45; margin-top:4px; }
+ .cta{ margin-top:auto; background:var(--green2); border-radius:16px; padding:15px 24px; display:flex; align-items:center; justify-content:space-between; } .cta .t{ color:var(--ink); } .cta .t b{ display:block; font-size:14.5px; font-weight:600; } .cta .t .u{ font-size:22px; font-weight:700; font-style:italic; letter-spacing:-.5px; } .cta svg{ width:36px; height:36px; }
 </style></head><body><div class=wrap>
  <div class=top><div class=logo>snaq<span class=i>I</span>A</div><div class=kick>Curso snaq · Programa ao vivo</div></div>
  <h1>@@NAME@@</h1><div class=subt>@@SUB@@</div>
