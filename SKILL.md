@@ -59,10 +59,13 @@ Duas disciplinas inegociáveis:
 ## Passo 0 — Briefing inicial (obrigatório no chat)
 
 Quando a skill rodar **interativamente no chat**, antes de qualquer coisa **faça um briefing
-obrigatório** com o usuário: objetivo da snaq com o professor, público prioritário, modelo de
-monetização, o que deve pesar no corte, além de posicionamento atual, vetos, materiais e a foto.
-É esse contexto que faz o scoring parar de ser achismo. Só comece a Fase 1 depois de coletar (ou o
-usuário dispensar) o briefing. Em modo batch, use os defaults e registre a lacuna.
+obrigatório** com **perguntas factuais sobre os limites do professor** — "até onde ele vai": teto
+técnico, o que prova ao vivo, track record de ensino e que case é comprovável; mais vetos/NDA,
+formatos que topa, materiais e foto. São fatos que quem entrevistou responde de imediato e que
+**bounded a Autoridade e a viabilidade de formato** — é o que faz o scoring parar de ser achismo.
+Evite perguntar a estratégia da snaq (subjetivo); intenção de posicionamento é **opcional**. Só comece
+a Fase 1 depois de coletar (ou o usuário dispensar) o briefing. Em modo batch, use os defaults
+conservadores e rebaixe a confiança dos eixos que dependiam de fato não coletado.
 → Perguntas exatas, defaults e como cada resposta calibra os eixos em [references/briefing-inicial.md](references/briefing-inicial.md).
 
 ## Pipeline (4 fases)

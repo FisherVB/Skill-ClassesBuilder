@@ -1,75 +1,71 @@
-# Briefing inicial (Passo 0) — calibração antes do pipeline
+# Briefing inicial (Passo 0) — limites factuais do professor
 
-Antes da Fase 1, quando a skill roda **interativamente no chat**, faça um **briefing obrigatório**
-com o usuário. O objetivo é coletar o contexto que a transcrição **não** entrega — intenção da snaq,
-público-alvo, modelo de monetização, vetos e posicionamento atual — para que o **scoring** (Autoridade,
-Demanda, Monetização, Escala) seja calibrado com dados, não com achismo.
+Antes da Fase 1, quando a skill roda **interativamente no chat**, faça um **briefing obrigatório**.
+O foco são **fatos sobre o professor** que a transcrição não fixa com certeza e que **bounded a Autoridade**
+e a **viabilidade dos formatos** — "até onde essa pessoa vai como professor". Nada de adivinhar a
+estratégia da snaq: perguntas **objetivas**, que quem entrevistou/conhece a pessoa responde de imediato.
 
-> **Regra:** no chat, o briefing é **obrigatório** e vem **antes** de montar o dossiê. Em modo batch
-> (não-interativo), não trave: use os defaults abaixo e registre no `dossie.md` que o briefing não foi
-> coletado.
+> **Regra:** no chat, o briefing é **obrigatório** e vem **antes** do dossiê. Em modo batch, não trave:
+> use os defaults conservadores do fim e registre no `dossie.md` que rodou sem briefing.
 
-## Bloco A — perguntas estruturadas (pergunte no chat)
+## Bloco A — capacidade e limites (perguntas estruturadas, factuais)
 
-Use uma pergunta interativa (ex.: `AskUserQuestion`) com as 4 questões abaixo. Se o usuário responder
-"tanto faz" a qualquer uma, aplique o default e siga.
+Use uma pergunta interativa (ex.: `AskUserQuestion`). Se o usuário não souber uma, aplique o default.
 
-**A1. Objetivo da snaq com este professor agora?**
-- **Carro-chefe / lançamento grande** — buscar volume, topo de funil
-- **Expandir catálogo** — curso complementar ao que já existe _(default)_
-- **Testar um tema/ângulo novo** — aposta exploratória
-- **Curso premium de nicho** — alto ticket, público restrito
+**A1. Teto técnico — até que nível ele ensina com autoridade real?**
+- **Iniciante** — introduz o tema, dá o mapa, mas não aprofunda
+- **Intermediário** — põe a mão na massa junto com o aluno
+- **Avançado** — constrói coisas não-triviais e responde dúvidas difíceis _(default se incerto)_
+- **Ponta / referência** — dos melhores no tema; não é encurralado nem por especialista
 
-**A2. Que público a snaq quer priorizar para ele?**
-- **B2C de massa** — profissionais e empreendedores individuais
-- **Times / empresas (B2B)** — gestores, áreas, in-company
-- **Nicho técnico avançado** — builders, devs, especialistas
-- **O que o tema pedir** — sem preferência fixa _(default)_
+**A2. Prova ao vivo — o que ele consegue fazer na frente do aluno?**
+- **Constrói / coda ao vivo do zero** — demonstração real, sem rede
+- **Demonstra em ferramentas prontas** — mostra funcionando, não constrói do zero _(default)_
+- **Conceito + framework** — explica/slides, pouca demo prática
 
-**A3. Que modelo de monetização priorizar?**
-- **Volume com ticket baixo** — workshop/gravado acessível, escala por mídia
-- **Premium com ticket alto** — programa ao vivo, mentoria, cohort
-- **Escada de produtos** — do acessível ao premium _(default)_
-- **Sem preferência**
+**A3. Track record de ensino — ele já ensinou/expôs isso?**
+- **Recorrente** — dá aula/mentoria/palestra sobre o tema com frequência
+- **Pontual** — já fez algumas vezes _(default)_
+- **Nunca formalmente, mas explica muito bem** — cru em formato, forte no conteúdo
+- **Cru em público** — pouca desenvoltura de palco; risco de execução
 
-**A4. No corte final deste caso, o que deve pesar mais?** _(múltipla escolha)_
-- **Autoridade / alinhamento** do professor
-- **Demanda de mercado** (tema quente)
-- **Monetização** (ticket / LTV)
-- **Escala** via mídia paga (volume)
+**A4. Case comprovável — a autoridade ancora em quê?**
+- **Público e verificável** — produto no ar, números, portfólio que dá pra citar
+- **Interno / sob NDA** — real, mas **não pode ser exposto** em marketing _(default: tratar como não-citável)_
+- **Só o relato da entrevista** — sem prova externa
 
-_Default de A4: nenhum realce — usa os pesos calibrados do `CLAUDE.md`._
+## Bloco B — abertas (mesmo turno, texto livre; todas opcionais)
 
-## Bloco B — perguntas abertas (mesmo turno, texto livre)
-
-No mesmo turno, em texto, peça (todas opcionais — o que o usuário tiver):
-1. **Posicionamento / foco atual** da pessoa: como ela quer ser vista **hoje**? (alimenta a Autoridade "atual")
-2. **Vetos ou temas sensíveis** a evitar (ex.: temas pessoais, compliance, exposição de terceiros).
-3. **Materiais** além da transcrição (CV, métricas, decks, docs) — e onde estão.
-4. **Foto da pessoa** para as peças de marketing — peça o arquivo/pasta (é também o Passo 0 das peças).
+1. **Onde ele é teto de mercado** vs. só "acima da média"? (destaque os temas em que é referência)
+2. **Formatos/disponibilidade** que ele topa e consegue entregar: workshop ao vivo · gravado · programa
+   ao vivo (4×2h) · mentoria em grupo/cohort · 1:1.
+3. **Vetos / temas sensíveis / NDA** — o que não pode virar curso nem aparecer em peça.
+4. **Materiais** além da transcrição (CV, métricas, decks) e a **foto** para as peças.
+5. _(Opcional)_ Se você **já tem** uma intenção de posicionamento/objetivo pra esse professor, diga;
+   senão, sigo pelo score.
 
 ## Como cada resposta entra no scoring
 
 | Resposta | O que calibra |
 |---|---|
-| **A1 Objetivo** | Ênfase entre Escala × Monetização × Demanda; e o **nº de sugestões** (ex.: premium de nicho tende a menos SKUs) |
-| **A2 Público** | **ICP**, **Público Meta Ads**, o recorte de **SAM/SOM** e a faixa de ticket plausível |
-| **A3 Monetização** | **Faixa de preço**, eixo **Monetização** e quais **formatos** priorizar (gravado barato × programa premium) |
-| **A4 Ênfase** | Afina a leitura dos 4 eixos **e vira sinal para o loop de calibração dos pesos** no `CLAUDE.md`. **Não** sobrescreve os pesos ad-hoc — se o padrão se repetir em ≥2–3 casos, aí sim os pesos mudam pelo loop. |
-| **B1 Posicionamento** | Autoridade **"real + atual"** (alinhamento entra por aqui, não por flag) |
-| **B2 Vetos** | Remove temas da long-list; registra o corte em `decisao.md` |
-| **B3 Materiais** | Profundidade e confiança do dossiê |
-| **B4 Foto** | Peças de marketing (heros e sociais) |
+| **A1 Teto técnico** | **Teto da Autoridade por tema:** tema acima do teto dele é **capado** (ou cai); define o nível de aluno que a ementa pode mirar (não prometer "avançado" se o teto é intermediário) |
+| **A2 Prova ao vivo** | **Viabilidade de formato:** construir ao vivo habilita **programa premium ao vivo** (↑ Monetização) e molda a ementa (demo real × teoria); se é conceitual, peso no **gravado** |
+| **A3 Track record** | **Autoridade "atual"** + **risco de execução** → move a **confiança** do scoring. "Cru em público" ⇒ recomendar primeiro o formato de menor risco (gravado/workshop) antes do programa ao vivo |
+| **A4 Case comprovável** | **Força da evidência** da Autoridade: público+verificável ⇒ confiança alta e material p/ peças; interno/NDA ⇒ **não citar** número/claim nas peças (restrição de asset); só-relato ⇒ confiança menor, marcar como estimativa |
+| **B1 Teto de mercado** | separa **Autoridade 5** (referência) de **4** (acima da média) por tema |
+| **B2 Formatos** | quais **SKUs** são de fato ofertáveis (não montar programa ao vivo se ele só topa gravado) |
+| **B3 Vetos/NDA** | remove temas/claims da long-list e das peças; registra o corte em `decisao.md` |
+| **B4 Materiais/foto** | profundidade/confiança do dossiê + peças |
+| **B5 Intenção (opcional)** | se houver, entra como contexto; **não** sobrescreve o score |
 
 ## Registro
 
-Grave as respostas do briefing no topo do `pessoas/<nome>/resumo/dossie.md` (bloco "Briefing"), com data.
-Elas fazem parte do **log de decisão**: explicam por que o scoring pendeu de um jeito e não de outro.
-Se A4 destoar sistematicamente dos pesos atuais, anote no **Log de calibração** do `CLAUDE.md` (não mude
-peso por um caso isolado).
+Grave as respostas no topo do `pessoas/<nome>/resumo/dossie.md` (bloco "Briefing"), com data. Elas
+explicam **por que a Autoridade e a confiança ficaram onde ficaram** — fazem parte do log de decisão.
 
-## Defaults quando o briefing é pulado (batch ou "tanto faz")
+## Defaults quando o briefing é pulado (batch ou "não sei")
 
-Objetivo = expandir catálogo · Público = o que o tema pedir · Monetização = escada de produtos ·
-Ênfase = pesos vigentes do `CLAUDE.md` (sem realce) · sem vetos · só a transcrição · sem foto (peças
-saem sem retrato ou com placeholder). Registre no dossiê que rodou com defaults.
+Teto = **avançado** (conservador, sem prometer ponta) · Prova = **demonstra em ferramentas prontas** ·
+Track record = **pontual** · Evidência = **interno/NDA ⇒ não citável** (marcar números como estimativa) ·
+sem vetos · formatos = os três padrão · sem foto. Rebaixe **1 banda de confiança** de qualquer eixo que
+dependia de um fato não coletado e registre no dossiê.
