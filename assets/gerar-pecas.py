@@ -205,13 +205,13 @@ for short,row in thumbs:
     cells+=rowhtml+"</div>"
 MATRIX="""<!doctype html><html><head><meta charset=utf-8><style>"""+FONTS+"""
  @page{ size:@@PW@@px @@PH@@px; margin:0; }
- body{ width:@@PW@@px; height:@@PH@@px; background:#0E0F11; font-family:'Grotesk',sans-serif; color:#fff; }
+ body{ width:@@PW@@px; height:@@PH@@px; background:#FFFFFF; font-family:'Grotesk',sans-serif; color:#14243B; }
  .wrap{ padding:@@MX@@px; }
- .hd{ font-weight:700; font-size:26px; letter-spacing:-.4px; margin-bottom:26px; } .hd .i{ color:#37E27C; } .hd .s{ color:#9AA1A8; font-weight:500; font-size:20px; margin-left:8px; }
+ .hd{ font-weight:700; font-size:26px; letter-spacing:-.4px; margin-bottom:26px; } .hd .i{ color:#1DB863; } .hd .s{ color:#71808C; font-weight:500; font-size:20px; margin-left:8px; }
  .row{ display:flex; gap:@@GAP@@px; margin-bottom:@@GAP@@px; align-items:flex-start; } .row:last-child{ margin-bottom:0; }
  .cell{ display:flex; flex-direction:column; }
- .cap{ font-family:'Mono'; font-size:16px; color:#9AA1A8; margin-bottom:12px; letter-spacing:.02em; } .cap b{ color:#fff; }
- .cell img{ width:100%; border-radius:12px; border:1px solid rgba(255,255,255,.10); display:block; }
+ .cap{ font-family:'Mono'; font-size:16px; color:#71808C; margin-bottom:12px; letter-spacing:.02em; } .cap b{ color:#14243B; }
+ .cell img{ width:100%; border-radius:12px; border:1px solid #E4E8EC; box-shadow:0 3px 14px rgba(20,36,59,.10); display:block; }
 </style></head><body><div class=wrap>
  <div class=hd>snaq<span class=i>I</span>A <span class=s>· Ricardo Catto — peças de divulgação (feed · story · one-pager, por curso)</span></div>
  @@CELLS@@

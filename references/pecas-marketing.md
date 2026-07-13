@@ -63,6 +63,8 @@ O PDF de saída da pessoa tem **2 páginas**:
   cursos, colunas = formatos (Feed · Story · One-pager). **Cada asset leva uma legenda em cima**
   (ex.: `Soberania · Asset 1 · Feed`). As larguras das colunas seguem o aspecto de cada formato
   (story mais estreito, feed médio, one-pager mais largo); altura da miniatura fixa por linha.
+  **Fundo da página branco** (os assets são escuros — no fundo preto sumiam; no branco ficam
+  emoldurados, com sombra sutil e legenda em texto escuro).
 
 O **ZIP** continua com os 9 arquivos soltos (não muda) — a matriz é só para revisão de bater o olho.
 
