@@ -80,6 +80,7 @@ _(default inicial — soma 1,00)_
 |---|---|---|
 | 2026-07-10 | — (default 0,30/0,30/0,20/0,20) | pesos iniciais |
 | 2026-07-10 | mantido | 1º caso (Ricardo Catto): usuário escolheu mercado-primeiro → coincidiu com o default; sem ajuste |
+| 2026-07-13 | mantido | Vinicius Catto: Briefing A4 = **Escala via mídia paga**. 1 caso isolado → não muda peso; **sinal anotado** (se ênfase em Escala recorrer em ≥2–3 casos, avaliar wE +0,05). Efeito neste caso ficou na leitura do eixo Escala e no go-to-market, não nos pesos |
 
 > Enquanto houver poucos casos, os pesos ficam no default. A cada professor, o skill **anota** se a
 > escolha do usuário bateu com o score; quando o padrão ficar claro, ajusta. Alinhamento de
