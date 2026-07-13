@@ -42,9 +42,9 @@ verde **#1EFD8A** (neon, não #37E27C); fundos charcoal com **glow verde**; cupo
 
 - **Fundo:** `#0E0F11` (quase preto). **Cards:** `#17181B`, borda `rgba(255,255,255,.08)`.
 - **Verde snaq:** `#37E27C` (principal) / `#4BEA8A` (botão CTA). Texto branco; cinza `#9AA1A8`.
-- **Fontes:** **Poppins** (títulos/corpo — geométrica arredondada, a cara da snaq; use pesos 600/700/800
-  nos títulos) + **Space Mono** (cupom, números, labels, cursor). Baixe de google/fonts (`ofl/poppins`,
-  `ofl/spacemono`) e instale/coloque ao lado do HTML — mesma lógica da Montserrat em [saida-pdf.md](saida-pdf.md).
+- **Fontes:** **Montserrat** (títulos/corpo — fonte da marca; arquivo variável, pesos 100–900) +
+  **Space Mono** (cupom, números, labels, cursor). Baixe de google/fonts (`ofl/montserrat`,
+  `ofl/spacemono`) e instale/coloque ao lado do HTML.
 - **Logo:** aproximação `snaq` (branco) + `I` (verde) + `A` (branco). ⚑ **Trocar pelo SVG/logo oficial
   da snaq quando disponível** — o atual é aproximação.
 - **Regras de conteúdo (importantes):**

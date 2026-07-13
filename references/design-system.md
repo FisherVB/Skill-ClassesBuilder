@@ -25,9 +25,8 @@ com `--green` em alpha ~8–14%.
 
 ## 2. Tipografia
 
-- **Família:** geométrica arredondada. Melhor equivalente livre = **Poppins** (é o que usamos hoje).
-  ⚠️ **Pode ser uma fonte de marca licenciada** (Sofia/Gilroy/TT Norms/etc.) — só o time da snaq tem o
-  arquivo. **Precisamos do .ttf/.otf oficial** para bater 100% (ver §5).
+- **Família:** **Montserrat** (confirmado pela marca). Geométrica; usar o arquivo variável
+  `Montserrat.ttf` (pesos 100–900). Baixe de google/fonts (`ofl/montserrat`).
 - **Pesos:** títulos em ExtraBold/Bold (800/700); corpo em Regular/Medium.
 - **Mono:** cupom, códigos e labels em **Space Mono** (confere com os refs).
 - **Caixa:** títulos de peça às vezes em CAIXA ALTA (feed "AS 4 COISAS…"); hero em Title Case.
@@ -57,8 +56,7 @@ com `--green` em alpha ~8–14%.
 - **Story** (`ref2`): `--bg-story` #131314, mais limpo, logo grande centralizado.
 
 ## 5. O que precisamos da marca para chegar a 100%
-Cor, espaçamento, componentes e layout dá para replicar dos refs. **Duas coisas não dá para
-reverter por pixel** e mudam tudo:
-1. **A fonte oficial** (arquivo .ttf/.otf) — se não for Poppins.
-2. **O logo oficial** (SVG ou PNG transparente).
-Com esses dois, o resto encaixa. Sem eles, ficamos em ~90% (fonte/logo aproximados).
+Cor, espaçamento, componentes e layout dá para replicar dos refs; a **fonte é Montserrat** (✔ resolvido).
+Falta uma coisa que não dá para reverter por pixel:
+1. **O logo oficial** (SVG ou PNG transparente) — hoje o `snaqIA` é desenhado no CSS (aproximação).
+Com o logo, fecha 100%.

@@ -16,11 +16,7 @@ def fill(t,c):
     return t
 
 FONTS = """
- @font-face{ font-family:'Grotesk'; src:local('Poppins'),url('Poppins-Regular.ttf') format('truetype'); font-weight:400; }
- @font-face{ font-family:'Grotesk'; src:local('Poppins Medium'),url('Poppins-Medium.ttf') format('truetype'); font-weight:500; }
- @font-face{ font-family:'Grotesk'; src:local('Poppins SemiBold'),url('Poppins-SemiBold.ttf') format('truetype'); font-weight:600; }
- @font-face{ font-family:'Grotesk'; src:local('Poppins Bold'),url('Poppins-Bold.ttf') format('truetype'); font-weight:700; }
- @font-face{ font-family:'Grotesk'; src:local('Poppins ExtraBold'),url('Poppins-ExtraBold.ttf') format('truetype'); font-weight:800; }
+ @font-face{ font-family:'Grotesk'; src:local('Montserrat'),url('Montserrat.ttf') format('truetype'); font-weight:100 900; }
  @font-face{ font-family:'Mono'; src:local('Space Mono'),url('SpaceMono-Regular.ttf') format('truetype'); font-weight:400; }
  @font-face{ font-family:'Mono'; src:local('Space Mono'),url('SpaceMono-Bold.ttf') format('truetype'); font-weight:700; }
  :root{ --bg:#16171A; --card:#1F201F; --line:rgba(255,255,255,.08); --green:#1EFD8A; --green2:#1EFD8A; --gray:#9DA0A0; --ink:#0B2E19; }

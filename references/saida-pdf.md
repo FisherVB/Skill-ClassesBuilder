@@ -7,7 +7,7 @@ de assets). Sempre gere o PDF ao fechar as sugestões.
 
 ## Especificação de design (fixa — identidade snaq)
 
-- **Fonte:** **Poppins** (títulos/corpo) + **Space Mono** (labels: TAM/SAM/SOM, formatos, score, header).
+- **Fonte:** **Montserrat** (títulos/corpo — fonte da marca snaq) + **Space Mono** (labels: TAM/SAM/SOM, formatos, score, header).
 - **Fundo escuro** (`#0E0F11`); células em painel `#17181B`; texto claro; hairlines translúcidas.
 - **Verde snaq** `#37E27C` nos rótulos do cabeçalho, preços e bullets do 1º curso.
 - **Formato:** tabela única, 9 colunas (Tema · ICP · Público Meta Ads · Tamanho TAM/SAM/SOM · Faixa de
@@ -25,12 +25,12 @@ O template pronto (CSS + estrutura + linha de exemplo) está em
 
 ## Procedimento
 
-### 1. Garantir as fontes (Poppins + Space Mono)
+### 1. Garantir as fontes (Montserrat + Space Mono)
 Instalar em `~/Library/Fonts` (macOS) **ou** deixar os `.ttf` ao lado do HTML:
 ```bash
-for w in Regular SemiBold Bold ExtraBold; do curl -sL -o Poppins-$w.ttf "https://github.com/google/fonts/raw/main/ofl/poppins/Poppins-$w.ttf"; done
+curl -sL -o Montserrat.ttf "https://github.com/google/fonts/raw/main/ofl/montserrat/Montserrat%5Bwght%5D.ttf"
 curl -sL -o SpaceMono-Regular.ttf "https://github.com/google/fonts/raw/main/ofl/spacemono/SpaceMono-Regular.ttf"
-cp Poppins-*.ttf SpaceMono-*.ttf ~/Library/Fonts/   # ajuda o Chrome a achar
+cp Montserrat.ttf SpaceMono-*.ttf ~/Library/Fonts/   # ajuda o Chrome a achar
 ```
 
 ### 2. Preencher o template
