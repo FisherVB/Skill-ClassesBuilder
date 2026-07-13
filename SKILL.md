@@ -56,6 +56,15 @@ Duas disciplinas inegociáveis:
    ancorados em **pesquisa web real** (você DEVE pesquisar) e marcados com nível de confiança.
    Ver [references/criterios-comerciais.md](references/criterios-comerciais.md).
 
+## Passo 0 — Briefing inicial (obrigatório no chat)
+
+Quando a skill rodar **interativamente no chat**, antes de qualquer coisa **faça um briefing
+obrigatório** com o usuário: objetivo da snaq com o professor, público prioritário, modelo de
+monetização, o que deve pesar no corte, além de posicionamento atual, vetos, materiais e a foto.
+É esse contexto que faz o scoring parar de ser achismo. Só comece a Fase 1 depois de coletar (ou o
+usuário dispensar) o briefing. Em modo batch, use os defaults e registre a lacuna.
+→ Perguntas exatas, defaults e como cada resposta calibra os eixos em [references/briefing-inicial.md](references/briefing-inicial.md).
+
 ## Pipeline (4 fases)
 
 Execute nesta ordem. Cada fase produz um artefato; não pule para as sugestões antes de
@@ -102,13 +111,13 @@ que melhor servir o entrevistado).
   1080×1350 + story 1080×1920) e o one-pager de venda (documento A4). **Peça a foto no início** (Passo 0)
   e salve em `pessoas/<pessoa>/`. Ver [references/pecas-marketing.md](references/pecas-marketing.md).
 
-## Perguntas de aprofundamento (quando rodar no chat)
+## Perguntas de aprofundamento (durante o pipeline)
 
-Quando um tema promissor tiver **evidência rasa** (competência 🟡/🔵 ou demanda incerta), e o skill
-estiver rodando **interativamente no chat** (ex.: Claude Desktop), **pergunte ao usuário ali mesmo**
-para fortalecer o dossiê antes de finalizar — em vez de só registrar a lacuna. Foque nas perguntas que
-mais mudam o scoring (o que comprova autoridade num tema de alta demanda; qual o posicionamento atual
-da pessoa; que material adicional existe). Rodando em modo não-interativo (batch), registre as
+O **Passo 0** já coletou o contexto de calibração no início. Além dele, quando um tema promissor tiver
+**evidência rasa** (competência 🟡/🔵 ou demanda incerta) e a skill estiver rodando **interativamente no
+chat**, **pergunte ao usuário ali mesmo** para fortalecer o dossiê antes de finalizar — em vez de só
+registrar a lacuna. Foque nas perguntas que mais mudam o scoring (o que comprova autoridade num tema de
+alta demanda; que material adicional existe). Rodando em modo não-interativo (batch), registre as
 perguntas como lacunas no `dossie.md`.
 
 ## Workspace e histórico

@@ -66,6 +66,8 @@ professores — é assim que o skill aprende **onde o usuário quer cair**, sem 
 _(default inicial — soma 1,00)_
 
 ### Loop de calibração (rodar ao fechar cada professor)
+0. Considere a **ênfase declarada no Briefing (Passo 0, A4)** deste caso como **sinal** — não como
+   override. Ela afina a leitura dos eixos; os pesos só mudam pelo padrão acumulado (passos 1–4).
 1. Compare o **ranking do score** com a **escolha final** que o usuário validou.
 2. Se houver **divergência sistemática** (ex.: o usuário repetidamente prefere temas de mais autoridade/
    alinhamento sobre temas de mais demanda/mercado, ou vice-versa), **proponha um ajuste pequeno** nos
