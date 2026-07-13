@@ -25,6 +25,12 @@ entrou), e deixa o critério transparente.
 1. **Mesma rubrica e pesos** da Fase 3 — o Mapa não é um scoring paralelo; é a long-list inteira pontuada
    e agrupada por caminho. Um curso pode aparecer em mais de um caminho se dois cruzamentos o geram;
    marque-o no caminho que melhor o explica e evite repetir na mesma página.
+1b. **Cada coluna precisa refletir a sua lente — não recicle os flagships de resultado em toda coluna.**
+   *Competência × Ferramenta* = cursos **ancorados na ferramenta** ("Aprenda n8n do zero", "Claude Code
+   do zero", "Apps com Lovable/Bolt"), não o nome-de-resultado do curso. *Competência × Função* = IA por
+   uso ("Agente Pessoal", "Agente de atendimento/WhatsApp"). *Setor* = vertical/nicho. *Framework próprio*
+   = método autoral. Se a coluna de ferramenta só tiver os mesmos flagships de outras colunas, ela está
+   errada — gere as ideias tool-first (uma por ferramenta que a pessoa domina).
 2. **Cobertura**: tente preencher todos os caminhos aplicáveis ao dossiê; onde não houver lastro, mostre
    vazio com o motivo (não invente candidato sem evidência).
 3. **Consistência com a tabela**: os ★ da página têm que ser exatamente os cursos da tabela, com o mesmo
