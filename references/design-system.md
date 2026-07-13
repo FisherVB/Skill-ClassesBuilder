@@ -55,68 +55,53 @@ com `--green` em alpha ~8–14%.
 - **Feed "4 coisas"** (`ref3`): `--bg` #171919 + fumaça/glow verde no canto.
 - **Story** (`ref2`): `--bg-story` #131314, mais limpo, logo grande centralizado.
 
-## 6. Anatomia de composição por asset
+## 6. Anatomia de composição — **medida dos ref-assets** (não dos nossos templates)
 
-Especificação de layout de cada peça: escala tipográfica, **orçamento de caracteres** por elemento
-(quantos cabem sem estourar/quebrar feio — escreva o conteúdo para caber), imagem e ritmo. Valores em
-px salvo indicação. "chars" = limite prático por linha (Montserrat) × nº de linhas.
+⚠️ Correção: esta seção descreve a composição **dos 3 arquivos reais** em `../assets/ref-assets/`,
+medida por pixel. Os **tamanhos de fonte são estimados** de cap-height (marcados `~`); os **caracteres**
+são contados do texto real dos refs; **posições/alturas de blocos são medidas** (px e %H do canvas).
+Nota: os 3 refs são **dois feeds de layouts diferentes + um story** — nossa taxonomia (feed/story/
+one-pager) mapeia: nosso feed ≈ ref3, nosso story ≈ ref2; **ref1 (feed-hero) ainda não replicamos**;
+o **one-pager é formato nosso** (documento do deliverable, sem ref snaq).
 
-### 6.1 FEED — 1080×1350 (densidade média)
-Margem segura: 58px lados / 56–58 topo-base → **área útil ~956px** de largura.
+### 6.1 ref-asset1 — FEED "HERO" (1080×1350) · foto grande do professor
+Foco: **foto recortada grande do professor** + título gigante + CTA alto.
 
-| Elemento | px / peso | Caixa | Cor | Linhas | ~chars (orçamento) |
-|---|---|---|---|---|---|
-| Logo | 36 / 700 | — | branco+verde | 1 | fixo |
-| Selo professor — nome | 23 / 700 | — | `--ink` | 1 | ~22 |
-| Selo professor — cargo | 12 / 500 | — | `--ink` | 1 | ~34 |
-| **H1** (título) | **60 / 700** | MAIÚSCULA | branco (1ª expressão **verde**) | **2 fixas** | **~24–26/linha** |
-| H1 — nome do curso | 40–58 / 700 itálico | Title | **verde** + swoosh | 1 (ideal) | **≤~28 a 58px; nome longo → cair p/ 40px (~40)** |
-| Sub (promessa) | 21 / 400 | frase | `--gray` | 2 | **~130–150 total** |
-| Card — número | 28 / 700 mono | — | verde | 1 | 2 (01–04) |
-| Card — título (H3) | 26 / 700 | Title | branco | 1–2 | **~28 (1 linha) / ~56 (2)** |
-| Card — apoio (P) | 16 / 400 | frase | `--gray` | 2 | **~90–100** |
-| Cupom — código | 34 / 700 mono | MAIÚSC | verde | 1 | ~12 |
-| Cupom — preço novo | 40 / 700 | — | branco | 1 | ~9 |
-| CTA — URL | 29 / 700 itálico | — | `--ink` | 1 | ~34 |
+| Zona (medida) | y (%H) | Elemento | ~fonte / peso | chars reais |
+|---|---|---|---|---|
+| Topo | 4% | Pill de URL (borda verde) + logo (dir.) | ~20 mono / ~34 (logo) | url "www.snaq.co/curso-ia-builder" (28) |
+| ~10% | — | Kicker "CURSO SNAQ" | ~40 / 700 MAIÚSC | 10 |
+| ~15–28% | pico branco 21% | **Título gigante** "AI Builder" | **~180 / 800** branco | 2 palavras (~10) |
+| ~34–42% | verde @38% | Subhead 3 linhas; **última expr. verde** ("segundo cérebro de IA.") | ~64 / 700 | ~18–22/linha |
+| ~45–90% | — | **FOTO do professor: recorte grande** (esq., ~40–50% da largura, ancorada na base) | — | — |
+| ~50% | — | Nome do professor (dir.) + cargo | ~64 / 800 · ~40 | "RAFAEL GIROLINETO" (17) |
+| **73–88%** | **h≈204px** | **Botão CTA verde** (x0–808) "RESERVE SUA VAGA AGORA!" | ~72 / 800 `--ink` | ~11/linha × 2 |
+| ~95% | — | Rodapé "VAGAS LIMITADAS → GARANTA A SUA!" | ~30 / 700 | ~32 |
 
-- **Imagem:** foto do professor **92×92px, círculo**, anel `--ink` 3px, dentro do selo verde (topo-direita). Sem outra imagem (fundo é charcoal + glow).
-- **Grid:** 2×2 cards, gap 16, card ~470px (padding 24×28 → conteúdo ~414px).
-- **Ritmo (topo→base):** logo+selo → H1 (3 linhas) → sub → grid 2×2 → cupom → CTA. CTA sempre encostado no rodapé.
+### 6.2 ref-asset2 — STORY (1080×1920) · sem foto, grafismo domina
+| Zona (medida) | y (%H) | Elemento | ~fonte / peso | chars reais |
+|---|---|---|---|---|
+| Topo | ~6% | **Logo grande centralizado** | ~64 / 700 | — |
+| ~22–42% | verde @27–34% | **Headline gigante 4 linhas**; **2 palavras verdes** ("agente pessoal") | **~120 / 800** | ~8–11/linha × 4 |
+| ~48–62% | pico branco 55% | Promessa (branco, trecho em bold) | ~52 / 400–700 | **~135 total** (~6 linhas) |
+| dir. | — | **Grafismo 3D** (asterisco laranja = **Claude — NÃO usar**) | — | — |
+| ~66% | — | Cupom-ticket (dark, perfuração) | mono | "IA30" |
+| **72–87%** | **h≈292px** | **Bloco CTA verde** (w≈856) com pill "INSCRIÇÕES ABERTAS · INÍCIO 07/07" + "Curso AI Builder" + cursor | ~90 / 800 `--ink` | título ~16 |
 
-### 6.2 STORY — 1080×1920 (densidade limpa)
-Margem segura: 76px lados / 96 topo, 84 base → **área útil ~928px**.
+### 6.3 ref-asset3 — FEED "GRID" (1080×1350) · 2×2 cards com bullets (DENSO)
+| Zona (medida) | y (%H) | Elemento | ~fonte / peso | chars reais |
+|---|---|---|---|---|
+| ~5–13% | verde @9% | Header: **"AS 4 COISAS" verde** + "QUE VOCÊ VAI APRENDER NO CURSO DE IA" branco + **"do jeito Snaq" verde itálico + swoosh** | ~56 / 800 MAIÚSC | "AS 4 COISAS"(11) + ~35 + "do jeito Snaq"(13) |
+| ~5–14% | — | **Selo do professor verde** (topo-dir., x628–1076) — foto recortada saindo pelo topo | nome ~30 / cargo ~16 | — |
+| ~18–82% | branco @49% | **2×2 cards**: nº verde (01–04) + **título MAIÚSC** + **3–5 bullets** | título ~34 / 700 · bullet ~26 / 400 | título ~20–30; cada bullet ~50–90 (2 linhas) |
+| **87%** | **h≈100px** | **Cupom (dark, esq.) + CTA verde (dir., x244–1076) lado a lado** | CTA ~40 | "LANCAMENTO40" · "Garanta sua vaga" |
 
-| Elemento | px / peso | Caixa | Cor | Linhas | ~chars |
-|---|---|---|---|---|---|
-| Logo | **56 / 700, centralizado** | — | branco+verde | 1 | fixo |
-| Kicker | 20 / 400 mono | MAIÚSC | verde | 1 | ~34 |
-| **Gancho (hook)** | **106 / 700** | Title | branco (**1 palavra/expr. verde**) | **3** | **~14–15/linha (~40 total) — tem que ser curtíssimo** |
-| Nome do curso | 44 / 700 | Title | verde | 1 | ~36 |
-| Subtítulo | 26 / 400 | — | `--gray` | 1 | ~46 |
-| Selo — nome | 36 / 700 | — | branco | 1 | ~26 |
-| CTA — URL | 36 / 700 itálico | — | `--ink` | 1 | ~28 |
-| Cupom (linha) | 24 / 400 mono | — | gray+verde | 1 | ~50 |
-
-- **Imagem:** foto **132×132px, círculo**, anel verde 3px (badge horizontal com nome/cargo). Sem grafismo (o ref usa um asterisco 3D laranja = **Claude**, que não usamos).
-- **Composição:** o gancho **domina** o terço superior; muito **respiro** (espaço vazio proposital) no meio; foto+cupom+CTA no rodapé. É a peça mais "arejada".
-
-### 6.3 ONE-PAGER — A4 210×297mm (densidade carregada / documento)
-Margem: 15mm. **Não é social** — é o único que "enche".
-
-| Elemento | px / peso | Cor | ~chars |
-|---|---|---|---|
-| H1 (nome do curso) | 35 / 800 | branco | ~34/linha (≤2 linhas) |
-| Subtítulo | 18 / 600 | verde | ~60 |
-| Promessa | 13,5 / 400 | claro | ~230–260 (3 linhas) |
-| Data strip — número (×3) | 18 / 700 mono | verde | 2–6 (ex.: "53,6%") |
-| Data strip — texto (×3) | 10,5 / 400 | gray | ~60 |
-| Learn card — título (×4) | 14,5 / 700 | branco | ~26 |
-| Learn card — apoio (×4) | 11,5 / 400 | gray | ~80 |
-| Formato — preço (×3) | 18 / 700 | verde | ~14 |
-| Para quem é | 12 / 400 | gray | ~180 |
-
-- **Imagem:** foto **38×38px** (mini, no crédito "com [nome]"). Documento, foto é opcional/discreta.
-- **Estrutura:** hero → data strip (3 provas) → "o que vai aprender" (2×2) → formatos (3) → para quem → CTA. Tudo tem que caber em **1 página A4** (se estourar, reduzir fontes/margens — ver `saida-pdf.md`).
+**Diferenças-chave dos meus templates (a corrigir se quisermos fidelidade total):**
+- Feed real (ref3) tem **3–5 bullets por card** (denso). Meu feed usa só título + 1 linha (mais limpo) — foi **escolha minha**, não do ref.
+- Feed real posiciona **cupom e CTA lado a lado**; o meu empilha (cupom em cima, CTA embaixo).
+- Existe um **feed-hero (ref1)** com foto grande recortada — layout que eu **não tenho**.
+- Story real (ref2) **não tem foto** (usa grafismo); coloquei foto no badge por decisão nossa.
+- Título gigante: refs usam fontes bem maiores (~120–180px) do que as minhas (60–106px).
 
 ## 7. Princípios de composição (o "não-mapeável")
 - **Um foco por peça social:** feed = a lista "4 coisas"; story = o gancho. Não competir dois focos.
