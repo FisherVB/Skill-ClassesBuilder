@@ -211,7 +211,7 @@ MATRIX="""<!doctype html><html><head><meta charset=utf-8><style>"""+FONTS+"""
  .row{ display:flex; gap:@@GAP@@px; margin-bottom:@@GAP@@px; align-items:flex-start; } .row:last-child{ margin-bottom:0; }
  .cell{ display:flex; flex-direction:column; }
  .cap{ font-family:'Mono'; font-size:16px; color:#71808C; margin-bottom:12px; letter-spacing:.02em; } .cap b{ color:#14243B; }
- .cell img{ width:100%; border-radius:12px; border:1px solid #E4E8EC; box-shadow:0 3px 14px rgba(20,36,59,.10); display:block; }
+ .cell img{ width:100%; border:1px solid #E4E8EC; display:block; }
 </style></head><body><div class=wrap>
  <div class=hd>snaq<span class=i>I</span>A <span class=s>· Ricardo Catto — peças de divulgação (feed · story · one-pager, por curso)</span></div>
  @@CELLS@@
