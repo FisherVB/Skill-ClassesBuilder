@@ -4,11 +4,16 @@ Referência para o entregável **#11**: para cada curso escolhido (Fase 4), o sk
 identidade visual da **snaq**. Há **dois tipos** — não confundir:
 
 **A) Peças de rede social** (levam a **foto da pessoa**, como nas referências):
-1. **Feed** — 1080×1350 (4:5), PNG — template [../assets/peca-divulgacao-template.html](../assets/peca-divulgacao-template.html).
-2. **Story** — 1080×1920 (9:16), PNG — mesma identidade, layout vertical.
+1. **Asset 1 — Feed "grid"** — 1080×1350 (4:5), PNG — cards com bullets + cupom/CTA lado a lado (ref3).
+2. **Asset 2 — Story** — 1080×1920 (9:16), PNG — gancho gigante, sem grafismo (ref2).
+4. **Asset 4 — Feed "hero"** — 1080×1350 (4:5), PNG — **foto grande** do professor + título gigante + CTA alto (ref1).
 
 **B) Documento** (não é rede social):
-3. **One-pager de venda** — A4 PDF — template [../assets/one-pager-template.html](../assets/one-pager-template.html).
+3. **Asset 3 — One-pager de venda** — A4 PDF (formato nosso, não é peça snaq).
+
+Anatomia exata de cada um (medida dos refs) em [design-system.md](design-system.md) §6. Os templates
+`assets/*.html` trazem exemplos; o gerador em lote [gerar-pecas.py](../assets/gerar-pecas.py) produz
+os 4 por curso.
 
 Os templates estão preenchidos com um exemplo (curso "Soberania Cognitiva") — **adapte** por curso.
 Salve em `pessoas/<pessoa>/resumo/`.
