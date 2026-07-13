@@ -98,8 +98,9 @@ que melhor servir o entrevistado).
 → Formato exato da saída (tabela única) em [references/template-saida.md](references/template-saida.md).
 → Além da tabela em markdown, **gere sempre o PDF** da tabela (Montserrat, uma página, bem espaçado) —
   ver [references/saida-pdf.md](references/saida-pdf.md) e o template [assets/tabela-template.html](assets/tabela-template.html).
-→ Sob demanda, gere **peças de marketing por curso** na identidade snaq (peça de divulgação social +
-  one-pager de venda) — ver [references/pecas-marketing.md](references/pecas-marketing.md).
+→ Gere **peças de marketing por curso** na identidade snaq: sociais **com a foto da pessoa** (feed
+  1080×1350 + story 1080×1920) e o one-pager de venda (documento A4). **Peça a foto no início** (Passo 0)
+  e salve em `pessoas/<pessoa>/`. Ver [references/pecas-marketing.md](references/pecas-marketing.md).
 
 ## Perguntas de aprofundamento (quando rodar no chat)
 

@@ -1,12 +1,26 @@
 # Peças de Marketing por Curso (identidade snaq)
 
-Referência para o entregável **#11**: para cada curso escolhido (Fase 4), o skill pode gerar duas
-peças na identidade visual da **snaq**:
-1. **Peça de divulgação** (social, 1080×1350 PNG) — template [../assets/peca-divulgacao-template.html](../assets/peca-divulgacao-template.html).
-2. **One-pager de venda** (A4 PDF) — template [../assets/one-pager-template.html](../assets/one-pager-template.html).
+Referência para o entregável **#11**: para cada curso escolhido (Fase 4), o skill gera peças na
+identidade visual da **snaq**. Há **dois tipos** — não confundir:
 
-Os templates estão preenchidos com um exemplo (curso "Soberania Cognitiva") — **adapte** o conteúdo
-por curso. Gere sob demanda ou junto da tabela final. Salve em `pessoas/<pessoa>/resumo/`.
+**A) Peças de rede social** (levam a **foto da pessoa**, como nas referências):
+1. **Feed** — 1080×1350 (4:5), PNG — template [../assets/peca-divulgacao-template.html](../assets/peca-divulgacao-template.html).
+2. **Story** — 1080×1920 (9:16), PNG — mesma identidade, layout vertical.
+
+**B) Documento** (não é rede social):
+3. **One-pager de venda** — A4 PDF — template [../assets/one-pager-template.html](../assets/one-pager-template.html).
+
+Os templates estão preenchidos com um exemplo (curso "Soberania Cognitiva") — **adapte** por curso.
+Salve em `pessoas/<pessoa>/resumo/`.
+
+## Passo 0 (obrigatório em chat) — pedir a foto da pessoa
+Ao acionar o skill num chat, **peça ao usuário a foto da pessoa** (retrato, boa resolução) para
+ilustrar os criativos sociais — como as peças de referência da snaq trazem o professor. Ao receber:
+- **Salve** em `pessoas/<pessoa>/foto-<pessoa>.<ext>` (precisa ser **arquivo**; se vier só colada
+  inline, peça o caminho/anexo).
+- Use nas peças **de rede social** (feed + story) com recorte/posicionamento da pessoa.
+- O **one-pager** pode ou não usar a foto (é documento; foto é opcional ali).
+- Sem foto disponível, gere as peças sem ela e sinalize que ficam melhores com o retrato.
 
 ## Identidade visual snaq (fixa)
 
@@ -18,7 +32,7 @@ por curso. Gere sob demanda ou junto da tabela final. Salve em `pessoas/<pessoa>
 - **Logo:** aproximação `snaq` (branco) + `I` (verde) + `A` (branco). ⚑ **Trocar pelo SVG/logo oficial
   da snaq quando disponível** — o atual é aproximação.
 - **Regras de conteúdo (importantes):**
-  - **NÃO** incluir foto de professor.
+  - **INCLUIR a foto da pessoa** nas peças de rede social (pedir no Passo 0) — como as referências da snaq.
   - **NÃO** usar o logo/asterisco do Claude — **exceto** se o curso for especificamente sobre Claude.
   - Preços e cupons são **ilustrativos** — confirmar com o time antes de publicar.
 
