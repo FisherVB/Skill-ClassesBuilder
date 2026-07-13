@@ -32,6 +32,12 @@ palavra-chave realçada em verde**; selo verde "ministrado por [nome] + foto"; c
 leve brilho verde. **Fonte da marca: geométrica arredondada (tipo Poppins/Sofia)** — não usar fonte
 angular/técnica para os títulos.
 
+## Design system (contrato — ler primeiro)
+
+Os **tokens exatos** (cores amostradas por pixel dos refs, tipografia, anatomia de cada componente)
+estão em **[design-system.md](design-system.md)**. É o contrato — siga-o literalmente. Destaques:
+verde **#1EFD8A** (neon, não #37E27C); fundos charcoal com **glow verde**; cupom/labels em Space Mono.
+
 ## Identidade visual snaq (fixa)
 
 - **Fundo:** `#0E0F11` (quase preto). **Cards:** `#17181B`, borda `rgba(255,255,255,.08)`.

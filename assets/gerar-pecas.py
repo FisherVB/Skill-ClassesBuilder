@@ -23,13 +23,13 @@ FONTS = """
  @font-face{ font-family:'Grotesk'; src:local('Poppins ExtraBold'),url('Poppins-ExtraBold.ttf') format('truetype'); font-weight:800; }
  @font-face{ font-family:'Mono'; src:local('Space Mono'),url('SpaceMono-Regular.ttf') format('truetype'); font-weight:400; }
  @font-face{ font-family:'Mono'; src:local('Space Mono'),url('SpaceMono-Bold.ttf') format('truetype'); font-weight:700; }
- :root{ --bg:#0E0F11; --card:#17181B; --line:rgba(255,255,255,.07); --green:#37E27C; --green2:#4BEA8A; --gray:#9AA1A8; --ink:#0B2C18; }
+ :root{ --bg:#16171A; --card:#1F201F; --line:rgba(255,255,255,.08); --green:#1EFD8A; --green2:#1EFD8A; --gray:#9DA0A0; --ink:#0B2E19; }
  *{ box-sizing:border-box; margin:0; padding:0; }
 """
 
 # ---------- FEED 1080x1350 — densidade MÉDIA (as 4 coisas) ----------
 FEED = """<!doctype html><html lang=pt-BR><head><meta charset=utf-8><style>"""+FONTS+"""
- body{ width:1080px; height:1350px; background:var(--bg); font-family:'Grotesk',sans-serif; color:#fff; overflow:hidden; }
+ body{ width:1080px; height:1350px; background:radial-gradient(130% 90% at 85% 8%, rgba(30,253,138,.13), transparent 55%), var(--bg); font-family:'Grotesk',sans-serif; color:#fff; overflow:hidden; }
  .wrap{ padding:58px 62px 56px; height:100%; display:flex; flex-direction:column; }
  .top{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:30px; }
  .logo{ font-weight:700; font-size:36px; letter-spacing:-.5px; padding-top:8px; } .logo .i{ color:var(--green); }
@@ -72,7 +72,7 @@ FEED = """<!doctype html><html lang=pt-BR><head><meta charset=utf-8><style>"""+F
 
 # ---------- STORY 1080x1920 — densidade LIMPA (um gancho grande) ----------
 STORY = """<!doctype html><html lang=pt-BR><head><meta charset=utf-8><style>"""+FONTS+"""
- body{ width:1080px; height:1920px; background:var(--bg); font-family:'Grotesk',sans-serif; color:#fff; overflow:hidden; }
+ body{ width:1080px; height:1920px; background:radial-gradient(120% 70% at 88% 6%, rgba(30,253,138,.12), transparent 55%), var(--bg); font-family:'Grotesk',sans-serif; color:#fff; overflow:hidden; }
  .wrap{ padding:96px 76px 84px; height:100%; display:flex; flex-direction:column; }
  .logo{ font-weight:700; font-size:42px; letter-spacing:-.5px; } .logo .i{ color:var(--green); }
  .kick{ font-family:'Mono'; font-size:20px; color:var(--green); letter-spacing:.12em; text-transform:uppercase; margin-top:52px; }
