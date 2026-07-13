@@ -55,36 +55,25 @@ Baseada nas peças reais da snaq (não copiar rígido; seguir a ideia):
 - **"Formatos e investimento"**: 3 cards (Workshop / Gravado / Programa) com preço em verde.
 - **"Para quem é"** + CTA verde com cursor.
 
-## Montagem no PDF final (matriz 3×3)
+## Montagem no PDF final (2 páginas)
 
-O PDF de saída da pessoa é **multipágina** e junta a tabela + os assets como imagens:
-
+O PDF de saída da pessoa tem **2 páginas**:
 - **Página 1** — a tabela comparativa de cursos (paisagem; ver [saida-pdf.md](saida-pdf.md)).
-- **Depois, para CADA curso do portfólio, 3 páginas de asset** com **rótulo fixo** (a "taxonomia de
-  assets" é a mesma para toda pessoa/curso):
-  - **Asset 1 — Feed** (rede social, 1080×1350, com foto da pessoa)
-  - **Asset 2 — Story** (rede social, 1080×1920, com foto da pessoa)
-  - **Asset 3 — One-pager** (documento A4)
+- **Página 2** — uma **matriz 3×3 ("jogo da velha")** com os 9 assets numa **única página**: linhas =
+  cursos, colunas = formatos (Feed · Story · One-pager). **Cada asset leva uma legenda em cima**
+  (ex.: `Soberania · Asset 1 · Feed`). As larguras das colunas seguem o aspecto de cada formato
+  (story mais estreito, feed médio, one-pager mais largo); altura da miniatura fixa por linha.
 
-Com 3 cursos → 1 (tabela) + 9 (assets) = **10 páginas**. Ordem: Curso 1 (Asset 1/2/3) → Curso 2
-(Asset 1/2/3) → Curso 3 (Asset 1/2/3). Cada página de asset leva um **rótulo** no topo, ex.:
-`ASSET 1 · FEED — <Nome do curso>`.
+O **ZIP** continua com os 9 arquivos soltos (não muda) — a matriz é só para revisão de bater o olho.
 
-**Como montar** (páginas de tamanhos diferentes convivem no merge):
-1. Renderize a **tabela** → `tabela.pdf` (paisagem).
-2. Para cada curso × formato, renderize o asset (Chrome `--screenshot` p/ feed/story PNG;
-   `--print-to-pdf` p/ one-pager). Envolva cada imagem numa **página com o rótulo** (HTML simples:
-   fundo, label no topo, imagem centralizada) e gere o PDF da página.
-3. **Merge** tudo em ordem com pypdf:
-   ```python
-   from pypdf import PdfWriter
-   w = PdfWriter()
-   for pdf in ["tabela.pdf", "c1-asset1.pdf", "c1-asset2.pdf", "c1-asset3.pdf",
-               "c2-asset1.pdf", ...]:
-       w.append(pdf)
-   w.write("Cursos_<pessoa>_completo.pdf")
-   ```
-Salve o PDF combinado em `pessoas/<pessoa>/resumo/` e ofereça cópia em `~/Downloads/`.
+**Densidade por formato (peças sociais = texto maior, menos texto):**
+- **Story = limpa** — um **gancho grande** (frase curta e forte) + nome do curso + foto + CTA. Pouco texto.
+- **Feed = média** — "As 4 coisas que você vai aprender" (só os 4 títulos, grandes) + cupom + CTA.
+- **One-pager = carregada** — o documento detalhado (prova social, ementa, formatos, preços).
+
+**Como montar** (Chrome render + pypdf merge): renderize feed/story (PNG) e one-pager (PDF+PNG),
+monte a página-matriz embutindo as miniaturas, e faça `w.append("tabela.pdf"); w.append("matrix.pdf")`.
+O [gerador](../assets/gerar-pecas.py) já faz tudo isso. Salve em `pessoas/<pessoa>/resumo/` + `~/Downloads/`.
 
 ### Entregáveis: PDF + ZIP (sempre os dois)
 - **PDF combinado** (`Cursos_<pessoa>_completo.pdf`) — para revisar/comparar (tabela + matriz de assets).
