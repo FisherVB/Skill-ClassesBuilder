@@ -86,6 +86,21 @@ Com 3 cursos → 1 (tabela) + 9 (assets) = **10 páginas**. Ordem: Curso 1 (Asse
    ```
 Salve o PDF combinado em `pessoas/<pessoa>/resumo/` e ofereça cópia em `~/Downloads/`.
 
+### Entregáveis: PDF + ZIP (sempre os dois)
+- **PDF combinado** (`Cursos_<pessoa>_completo.pdf`) — para revisar/comparar (tabela + matriz de assets).
+- **ZIP com os assets soltos** (`Assets_<pessoa>.zip`) — os arquivos individuais, prontos para uso
+  (postar/subir). Estrutura por curso, com nomes pela taxonomia fixa:
+  ```
+  Assets_<pessoa>/
+  ├── 01_<curso-slug>/
+  │   ├── asset-1-feed.png        (1080×1350)
+  │   ├── asset-2-story.png       (1080×1920)
+  │   └── asset-3-onepager.pdf    (A4)
+  ├── 02_<curso-slug>/ ...
+  └── 03_<curso-slug>/ ...
+  ```
+  Gere com `zip -r Assets_<pessoa>.zip Assets_<pessoa>/` e ofereça cópia em `~/Downloads/`.
+
 ## Como gerar (cada asset)
 ```bash
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
