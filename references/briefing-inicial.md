@@ -44,6 +44,29 @@ Use uma pergunta interativa (ex.: `AskUserQuestion`). Se o usuário não souber 
 5. _(Opcional)_ Se você **já tem** uma intenção de posicionamento/objetivo pra esse professor, diga;
    senão, sigo pelo score.
 
+## Bloco C — cobertura dos caminhos (para preencher o Mapa de Caminhos)
+
+Quando o entregável inclui o **Mapa de Caminhos** (rankings top-3 por cruzamento — ver
+[mapa-caminhos.md](mapa-caminhos.md)), o briefing pode e **deve ser mais longo**: cada resposta abaixo
+alimenta um ou mais caminhos com assertividade, em vez de deixar o score no chute. São factuais — quem
+entrevistou responde. Rode em quantas rodadas de pergunta forem necessárias (não precisa caber em 4).
+
+- **C1. Ferramentas que ele ensina hands-on** (lista) → alimenta **Competência × Ferramenta**. Marque o
+  teto por ferramenta se variar (ex.: "n8n avançado, Cursor intermediário").
+- **C2. Setores/verticais que ele viveu a fundo** (lista) → **Competência × Setor** e **Setor × Ferramenta**.
+  Sem vivência real, o caminho de setor fica vazio (honesto), não inventado.
+- **C3. Métodos/frameworks próprios** que ele toparia ensinar — e **quais ele acha vendáveis** →
+  **Framework próprio × Competência**. (O método que ele descreve "sem perceber que é método" costuma ser
+  o mais forte; confirme se ele venderia isolado.)
+- **C4. Dores/operações** onde ele já entregou resultado (Ops, vendas, CS, atendimento…) →
+  **Competência × Dor**.
+- **C5. Cases de paixão/laterais** com tração real (comunidade, marca, projeto) → **Paixão/Case × Competência**.
+- **C6. Provas públicas por área** (o que é citável vs. NDA, por tema) → **confiança de cada candidato** e
+  o que pode aparecer nas peças.
+
+> Cada item de C alimenta uma coluna do Mapa. Onde a resposta é "nada relevante", o caminho aparece
+> **vazio com o motivo** — o buraco é informação, não falha.
+
 ## Como cada resposta entra no scoring
 
 | Resposta | O que calibra |

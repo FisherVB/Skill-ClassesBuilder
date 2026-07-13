@@ -63,8 +63,10 @@ obrigatório** com **perguntas factuais sobre os limites do professor** — "at�
 técnico, o que prova ao vivo, track record de ensino e que case é comprovável; mais vetos/NDA,
 formatos que topa, materiais e foto. São fatos que quem entrevistou responde de imediato e que
 **bounded a Autoridade e a viabilidade de formato** — é o que faz o scoring parar de ser achismo.
-Evite perguntar a estratégia da snaq (subjetivo); intenção de posicionamento é **opcional**. Só comece
-a Fase 1 depois de coletar (ou o usuário dispensar) o briefing. Em modo batch, use os defaults
+Evite perguntar a estratégia da snaq (subjetivo); intenção de posicionamento é **opcional**. Quando o
+entregável inclui o **Mapa de Caminhos**, o briefing é **mais longo** (bloco de cobertura por caminho:
+ferramentas, setores, frameworks próprios, dores, cases, provas públicas) — não precisa caber em 4
+perguntas. Só comece a Fase 1 depois de coletar (ou o usuário dispensar) o briefing. Em modo batch, use os defaults
 conservadores e rebaixe a confiança dos eixos que dependiam de fato não coletado.
 → Perguntas exatas, defaults e como cada resposta calibra os eixos em [references/briefing-inicial.md](references/briefing-inicial.md).
 
@@ -110,6 +112,10 @@ que melhor servir o entrevistado).
 → Formato exato da saída (tabela única) em [references/template-saida.md](references/template-saida.md).
 → Além da tabela em markdown, **gere sempre o PDF** da tabela (Montserrat, uma página, bem espaçado) —
   ver [references/saida-pdf.md](references/saida-pdf.md) e o template [assets/tabela-template.html](assets/tabela-template.html).
+→ **Anexe ao PDF a página "Mapa de Caminhos"**: um ranking top-3 por caminho do motor combinatório
+  (Competência × Ferramenta, × Setor, × Dor, Framework próprio ×…), lado a lado, com score e os
+  selecionados marcados. É o benchmark de cursos possíveis da pessoa — mostra de onde cada curso veio e o
+  que ficou de fora. Ver [references/mapa-caminhos.md](references/mapa-caminhos.md).
 → Gere **peças de marketing por curso** na identidade snaq: sociais **com a foto da pessoa** (feed
   1080×1350 + story 1080×1920) e o one-pager de venda (documento A4). **Peça a foto no início** (Passo 0)
   e salve em `pessoas/<pessoa>/`. Ver [references/pecas-marketing.md](references/pecas-marketing.md).
