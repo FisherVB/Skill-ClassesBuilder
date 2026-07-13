@@ -21,6 +21,7 @@ FONTS = """
  @font-face{ font-family:'Mono'; src:local('Space Mono'),url('SpaceMono-Bold.ttf') format('truetype'); font-weight:700; }
  :root{ --bg:#16171A; --card:#1F201F; --line:rgba(255,255,255,.08); --green:#1EFD8A; --green2:#1EFD8A; --gray:#9DA0A0; --ink:#0B2E19; }
  *{ box-sizing:border-box; margin:0; padding:0; }
+ .g{ color:var(--green); }
 """
 
 # ---------- FEED 1080x1350 — densidade MÉDIA (as 4 coisas) ----------
@@ -37,11 +38,11 @@ FEED = """<!doctype html><html lang=pt-BR><head><meta charset=utf-8><style>"""+F
  .hi{ position:relative; display:inline-block; }
  .hi .txt{ font-style:italic; text-transform:none; font-weight:700; font-size:@@GSIZE@@px; color:var(--green); letter-spacing:-1px; line-height:1.02; }
  .hi svg{ position:absolute; left:-2px; bottom:-16px; height:26px; }
- .sub{ margin-top:30px; color:var(--gray); font-size:23px; line-height:1.4; max-width:860px; }
- .grid{ margin-top:38px; display:grid; grid-template-columns:1fr 1fr; gap:20px; }
- .c{ background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px 30px; }
+ .sub{ margin-top:26px; color:var(--gray); font-size:21px; line-height:1.4; max-width:860px; }
+ .grid{ margin-top:30px; display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+ .c{ background:var(--card); border:1px solid var(--line); border-radius:22px; padding:24px 28px; }
  .n{ font-family:'Mono'; font-weight:700; font-size:28px; color:var(--green); letter-spacing:1px; }
- .c h3{ font-weight:700; font-size:30px; margin:8px 0 0; letter-spacing:-.4px; line-height:1.08; }
+ .c h3{ font-weight:700; font-size:26px; margin:8px 0 7px; letter-spacing:-.4px; line-height:1.1; } .c p{ color:var(--gray); font-size:16px; line-height:1.36; }
  .foot{ margin-top:auto; padding-top:30px; }
  .coupon{ display:flex; background:var(--card); border:1px solid var(--line); border-radius:18px; overflow:hidden; }
  .coupon .l{ padding:20px 26px; flex:1; } .coupon .k{ font-family:'Mono'; font-size:15px; color:var(--gray); letter-spacing:.12em; }
@@ -53,13 +54,13 @@ FEED = """<!doctype html><html lang=pt-BR><head><meta charset=utf-8><style>"""+F
 </style></head><body><div class=wrap>
  <div class=top><div class=logo>snaq<span class=i>I</span>A</div>
   <div class=prof><div class=pinfo><span class=by>ministrado por</span><span class=pname>Ricardo Catto</span><span class=prole>@@ROLE@@</span></div><img src=foto-ricardo.jpeg></div></div>
- <h1>As 4 coisas que você<br>vai aprender no curso<br><div class=hi><span class=txt>@@NAME@@</span>@@SWOOSH@@</div></h1>
+ <h1><span class=g>As 4 coisas</span> que você<br>vai aprender no curso<br><div class=hi><span class=txt>@@NAME@@</span>@@SWOOSH@@</div></h1>
  <p class=sub>@@PROMISE@@</p>
  <div class=grid>
-  <div class=c><div class=n>01</div><h3>@@P1T@@</h3></div>
-  <div class=c><div class=n>02</div><h3>@@P2T@@</h3></div>
-  <div class=c><div class=n>03</div><h3>@@P3T@@</h3></div>
-  <div class=c><div class=n>04</div><h3>@@P4T@@</h3></div></div>
+  <div class=c><div class=n>01</div><h3>@@P1T@@</h3><p>@@P1D@@</p></div>
+  <div class=c><div class=n>02</div><h3>@@P2T@@</h3><p>@@P2D@@</p></div>
+  <div class=c><div class=n>03</div><h3>@@P3T@@</h3><p>@@P3D@@</p></div>
+  <div class=c><div class=n>04</div><h3>@@P4T@@</h3><p>@@P4D@@</p></div></div>
  <div class=foot><div class=coupon><div class=l><div class=k>USE O CUPOM</div><div class=code>@@CODE@@</div><div class=val>válido até @@VALID@@</div></div>
    <div class=r><div class=old>@@OLD@@</div><div class=new>@@NEW@@</div><div class=off>@@OFF@@ OFF</div></div></div>
   <div class=cta><div class=t><b>Garanta sua vaga:</b><span class=u>@@URL@@</span></div>
@@ -70,8 +71,8 @@ FEED = """<!doctype html><html lang=pt-BR><head><meta charset=utf-8><style>"""+F
 STORY = """<!doctype html><html lang=pt-BR><head><meta charset=utf-8><style>"""+FONTS+"""
  body{ width:1080px; height:1920px; background:radial-gradient(120% 70% at 88% 6%, rgba(30,253,138,.12), transparent 55%), var(--bg); font-family:'Grotesk',sans-serif; color:#fff; overflow:hidden; }
  .wrap{ padding:96px 76px 84px; height:100%; display:flex; flex-direction:column; }
- .logo{ font-weight:700; font-size:42px; letter-spacing:-.5px; } .logo .i{ color:var(--green); }
- .kick{ font-family:'Mono'; font-size:20px; color:var(--green); letter-spacing:.12em; text-transform:uppercase; margin-top:52px; }
+ .logo{ font-weight:700; font-size:56px; letter-spacing:-.6px; text-align:center; } .logo .i{ color:var(--green); }
+ .kick{ font-family:'Mono'; font-size:20px; color:var(--green); letter-spacing:.12em; text-transform:uppercase; margin-top:48px; }
  .hook{ font-weight:700; font-size:106px; line-height:.98; letter-spacing:-2px; margin-top:26px; }
  .cn{ color:var(--green); font-weight:700; font-size:44px; letter-spacing:-.6px; margin-top:40px; }
  .cs{ color:var(--gray); font-size:26px; margin-top:8px; }
@@ -141,7 +142,7 @@ SW = '<svg viewBox="0 0 540 26" fill=none style="width:%dpx"><path d="M6 17 C 15
 
 COURSES = [
  dict(slug="soberania-cognitiva", short="Soberania", NAME="Soberania Cognitiva", SUB="Liderança e Decisão na Era da IA",
-   GSIZE=58, SWOOSH=SW%540, HOOK="Não deixe a IA<br>decidir por<br>você.", ROLE=ROLE,
+   GSIZE=58, SWOOSH=SW%540, HOOK="Não deixe a IA<br>decidir <span class=g>por<br>você.</span>", ROLE=ROLE,
    PROMISE="Para líderes e founders que usam IA todo dia e não querem terceirizar o próprio julgamento.",
    P1T="Mapa da dependência", P1D="Onde você já delega atenção e decisão para a IA — sem perceber.",
    P2T="Recuperar a autoria", P2D="Discernimento como prática: decidir antes da pergunta fechar.",
@@ -153,7 +154,7 @@ COURSES = [
    FW="R$ 497–997", FG="R$ 297", FP="R$ 4.000–8.000",
    QUEM="C-level, fundadores e conselheiros que usam IA intensamente e querem preservar julgamento e autoria."),
  dict(slug="formacao-conselheiros-mentores", short="Conselheiros", NAME="Formação de Conselheiros-Mentores", SUB="Formação de conselheiros e mentores de travessia",
-   GSIZE=40, SWOOSH="", HOOK="O conselheiro<br>que o líder<br>procura.", ROLE=ROLE,
+   GSIZE=40, SWOOSH="", HOOK="O conselheiro<br>que o líder<br><span class=g>procura.</span>", ROLE=ROLE,
    PROMISE="Para quem quer atuar como conselheiro consultivo e mentor de líderes — com método, não improviso.",
    P1T="O novo mandato", P1D="O conselheiro que não vende resposta: sustentar a leitura, não dar a direção.",
    P2T="As 4 portas", P2D="A bússola de intervenção: interior e exterior, individual e coletivo.",
@@ -165,7 +166,7 @@ COURSES = [
    FW="R$ 497", FG="R$ 297", FP="R$ 8.000–30.000",
    QUEM="Executivos sêniores, ex-C-level e coaches que querem atuar como conselheiros consultivos e mentores de líderes."),
  dict(slug="sucessao-sem-ruptura", short="Sucessão", NAME="Sucessão sem Ruptura", SUB="Governança para Empresas Familiares",
-   GSIZE=52, SWOOSH=SW%560, HOOK="A sucessão não<br>precisa quebrar<br>a família.", ROLE=ROLE,
+   GSIZE=52, SWOOSH=SW%560, HOOK="A sucessão não<br>precisa <span class=g>quebrar<br>a família.</span>", ROLE=ROLE,
    PROMISE="Para donos e herdeiros que querem preparar a sucessão sem quebrar a família nem a empresa.",
    P1T="Os 3 patrimônios", P1D="Separar família, sociedade e gestão antes que se confundam.",
    P2T="A governança na prática", P2D="Conselho de família, acordo de sócios e matérias reservadas.",
