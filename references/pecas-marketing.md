@@ -55,7 +55,38 @@ Baseada nas peças reais da snaq (não copiar rígido; seguir a ideia):
 - **"Formatos e investimento"**: 3 cards (Workshop / Gravado / Programa) com preço em verde.
 - **"Para quem é"** + CTA verde com cursor.
 
-## Como gerar
+## Montagem no PDF final (matriz 3×3)
+
+O PDF de saída da pessoa é **multipágina** e junta a tabela + os assets como imagens:
+
+- **Página 1** — a tabela comparativa de cursos (paisagem; ver [saida-pdf.md](saida-pdf.md)).
+- **Depois, para CADA curso do portfólio, 3 páginas de asset** com **rótulo fixo** (a "taxonomia de
+  assets" é a mesma para toda pessoa/curso):
+  - **Asset 1 — Feed** (rede social, 1080×1350, com foto da pessoa)
+  - **Asset 2 — Story** (rede social, 1080×1920, com foto da pessoa)
+  - **Asset 3 — One-pager** (documento A4)
+
+Com 3 cursos → 1 (tabela) + 9 (assets) = **10 páginas**. Ordem: Curso 1 (Asset 1/2/3) → Curso 2
+(Asset 1/2/3) → Curso 3 (Asset 1/2/3). Cada página de asset leva um **rótulo** no topo, ex.:
+`ASSET 1 · FEED — <Nome do curso>`.
+
+**Como montar** (páginas de tamanhos diferentes convivem no merge):
+1. Renderize a **tabela** → `tabela.pdf` (paisagem).
+2. Para cada curso × formato, renderize o asset (Chrome `--screenshot` p/ feed/story PNG;
+   `--print-to-pdf` p/ one-pager). Envolva cada imagem numa **página com o rótulo** (HTML simples:
+   fundo, label no topo, imagem centralizada) e gere o PDF da página.
+3. **Merge** tudo em ordem com pypdf:
+   ```python
+   from pypdf import PdfWriter
+   w = PdfWriter()
+   for pdf in ["tabela.pdf", "c1-asset1.pdf", "c1-asset2.pdf", "c1-asset3.pdf",
+               "c2-asset1.pdf", ...]:
+       w.append(pdf)
+   w.write("Cursos_<pessoa>_completo.pdf")
+   ```
+Salve o PDF combinado em `pessoas/<pessoa>/resumo/` e ofereça cópia em `~/Downloads/`.
+
+## Como gerar (cada asset)
 ```bash
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 # Peça social (PNG 2x, 1080x1350):
