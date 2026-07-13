@@ -101,7 +101,17 @@ Salve o PDF combinado em `pessoas/<pessoa>/resumo/` e ofereça cópia em `~/Down
   ```
   Gere com `zip -r Assets_<pessoa>.zip Assets_<pessoa>/` e ofereça cópia em `~/Downloads/`.
 
-## Como gerar (cada asset)
+## Gerador em lote (recomendado)
+
+Para produzir os 9 assets + PDF combinado + ZIP de uma vez, use o script de referência
+[../assets/gerar-pecas.py](../assets/gerar-pecas.py) — parametrizado por uma lista `COURSES`
+(nome, subtítulo, promessa, 4 pilares, cupom, preços, público, data strip), a foto da pessoa
+(`foto-<pessoa>.jpeg`) e o PDF da tabela (página 1). Ele renderiza feed/story/one-pager via Chrome,
+monta as páginas rotuladas, faz o merge com pypdf e gera o `Assets_<pessoa>.zip`. Rode dentro de uma
+pasta que tenha as fontes (SpaceGrotesk/SpaceMono), a foto e o PDF da tabela. Adapte os dados de
+`COURSES` por pessoa (o script vem preenchido com um exemplo — Ricardo Catto).
+
+## Como gerar (cada asset, manual)
 ```bash
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 # Peça social (PNG 2x, 1080x1350):
