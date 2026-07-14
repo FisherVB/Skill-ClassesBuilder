@@ -81,6 +81,21 @@ entrevistou responde. Rode em quantas rodadas de pergunta forem necessárias (n�
 | **B4 Materiais/foto** | profundidade/confiança do dossiê + peças |
 | **B5 Intenção (opcional)** | se houver, entra como contexto; **não** sobrescreve o score |
 
+## Gate de evidência — quando o briefing não fecha um curso Forte
+
+O briefing pode revelar que **não há autoridade real e distinta suficiente** para nenhum curso Forte
+(≥ 4,3) — teto de visão sem profundidade, método compartilhado, verticais que são só exemplos, ângulo
+duplicado com um colega, sem prova citável, evidência de grupo/rasa. Quando isso acontece, **não force
+uma saída** (ver gate na Fase 4 do `SKILL.md`): **peça mais informação**, direcionada ao que puxou pra
+baixo. Perguntas típicas de segunda rodada:
+- **Ownable:** existe um método/abordagem que seja *só dele* (não emprestado do ecossistema)?
+- **Profundidade:** algum vertical/tema tem profundidade real (nº de projetos, resultado), não só exemplo?
+- **Prova:** existe algum case/número citável (mesmo anonimizado)?
+- **Fronteira:** o que exatamente ele faz que o colega que duplica **não** faz?
+- **Formato:** ele topa/consegue um formato ao vivo? que público segura?
+Na prática, isso costuma pedir uma **entrevista 1:1 dedicada** quando a fonte foi rasa (transcrição de
+grupo, material colado curto). O **Mapa de Caminhos** pode ser gerado mesmo assim — expõe o buraco.
+
 ## Registro
 
 Grave as respostas no topo do `pessoas/<nome>/resumo/dossie.md` (bloco "Briefing"), com data. Elas

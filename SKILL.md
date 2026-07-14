@@ -101,6 +101,16 @@ a [references/base-mercado.md](references/base-mercado.md).
 → Rubrica, pesos, sizing TAM/SAM/SOM, Público Meta Ads, Score final e protocolo em [references/criterios-comerciais.md](references/criterios-comerciais.md).
 
 ### Fase 4 — Seleção e saída
+**Gate de evidência (checar primeiro):** a saída final (tabela + peças) só é produzida se **ao menos um
+tema atingir a banda Forte (≥ 4,3)**. Se o scoring der **0 Forte**, **não force uma saída** — significa que
+a evidência não sustenta um curso com autoridade real e distinta. Em vez disso: (1) explique **qual eixo
+puxou pra baixo** (autoridade rasa? duplicação com outro professor? sem prova? teto abaixo da promessa?);
+(2) **peça informação adicional direcionada** — tipicamente uma **entrevista 1:1 dedicada** e/ou os fatos
+específicos que faltam (um método realmente *ownable*, um vertical com profundidade, uma prova citável, a
+fronteira exata vs. um colega que duplica); (3) só rode o restante da saída quando a nova evidência levar
+algum tema a Forte. O **Mapa de Caminhos** pode ser gerado mesmo com 0 Forte — ele mostra a exploração e
+torna o buraco visível. Ver [references/briefing-inicial.md](references/briefing-inicial.md).
+
 A quantidade de sugestões é **decidida pelo score, não fixa**. Padrão: 3. Mas se a
 distribuição pedir, mostre 2 (quando o top-2 abre gap claro sobre o 3º) ou até 4 (empate
 forte). Para as escolhidas, entregue a tabela final com Tema · ICP · Tamanho de mercado (BR) ·
@@ -142,7 +152,7 @@ chat, sem workspace), execute o pipeline normalmente e apresente os artefatos no
 1. Nunca atribua competência sem evidência na entrevista.
 2. Sempre pesquise a web para validar demanda, concorrência, sizing e preço — e marque a confiança.
 3. Autoridade sem demanda não vira curso. Demanda sem autoridade também não.
-4. Número de sugestões é função do score, não um número fixo.
+4. Número de sugestões é função do score, não um número fixo. **Se der 0 Forte, não entregue peças — pare e peça mais informação (gate de evidência, Fase 4).**
 5. Prefira temas específicos e vendáveis a temas genéricos ("IA para X vertical" > "Introdução à IA").
 6. As sugestões finais têm que ser distintas entre si e parecer algo que uma grande edtech lançaria.
 7. Mantenha o dossiê e o log de decisão como artefatos escritos — eles são o produto tanto quanto a tabela.
