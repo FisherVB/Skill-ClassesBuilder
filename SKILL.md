@@ -114,7 +114,9 @@ torna o buraco visível. Ver [references/briefing-inicial.md](references/briefin
 A quantidade de sugestões é **decidida pelo score, não fixa**. Padrão: 3. Mas se a
 distribuição pedir, mostre 2 (quando o top-2 abre gap claro sobre o 3º) ou até 4 (empate
 forte). Para as escolhidas, entregue a tabela final com Tema · ICP · Tamanho de mercado (BR) ·
-Faixa de preço · 3 ementas (workshop 2h / gravado 2h / programa 4×2h). As sugestões finais
+Faixa de preço · 3 ementas (workshop 2h / gravado 2h / programa 4×2h) · **formato recomendado para
+começar** (qual dos 3 tem mais aderência ao contexto — pessoa, dinâmica, demanda, risco — com uma linha
+de justificativa; ver [references/criterios-comerciais.md](references/criterios-comerciais.md)). As sugestões finais
 devem ser **diferentes entre si** e coerentes como portfólio (independentes, ou
 básico→intermediário→avançado, ou dois complementares + um integrador — escolha a estrutura
 que melhor servir o entrevistado).

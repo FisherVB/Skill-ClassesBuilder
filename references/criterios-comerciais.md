@@ -50,6 +50,29 @@ O número **não é fixo**. A partir dos scores ordenados:
 - Nunca force um tema fraco só para fechar 3. Melhor 2 fortes que 3 com um fraco.
 - Explique em uma linha por que parou naquele número (com base na distribuição dos scores).
 
+## Formato recomendado para começar (por curso)
+
+Para **cada curso** escolhido, indique **qual dos 3 formatos (workshop ao vivo · gravado · programa ao
+vivo) é o melhor para *começar***. Não é o mais lucrativo no papel — é o de maior **aderência ao contexto**
+(a pessoa, a dinâmica dela, a demanda e o risco). Heurística:
+
+- **Workshop ao vivo (2h) — validar / de-riscar / esquentar.** Comece por aqui quando: o professor é
+  ótimo comunicador mas **nunca deu curso formal** (testar execução com baixo custo); a promessa é uma
+  **vitória rápida** ou um gancho quente; você quer **sinal de demanda** antes de investir produção; ou o
+  tema é conceitual/visão (bom ao vivo, com Q&A). É o começo mais comum quando a confiança de execução é média.
+- **Gravado (2h) — escalar / evergreen / massa.** Comece por aqui quando: a demanda é **ampla e escalável
+  por mídia paga** (topo de funil), o conteúdo é **estável/evergreen**, a autoridade já é sólida, e o
+  objetivo é **volume com custo marginal baixo**. Bom para cursos de massa e ticket menor.
+- **Programa ao vivo (4×2h) — premium / profundidade / nicho.** Comece por aqui quando: o tema é
+  **transformacional/profundo**, o público é **B2B/líderes** disposto a pagar por cohort/mentoria, o
+  professor **sustenta profundidade ao vivo**, e a jogada é **margem por aluno**, não volume. Evite começar
+  aqui se a execução ao vivo do professor é incerta (de-risque antes com workshop).
+
+Cruze com o briefing (Passo 0): **prova ao vivo** e **track record de ensino** puxam para começar no
+workshop (de-risco); **demanda de massa + escala** puxa para o gravado; **ticket alto + nicho B2B +
+profundidade** puxa para o programa. Registre o formato recomendado **e a justificativa de contexto** na
+tabela de saída (uma coluna/marcador "começar por").
+
 ## Protocolo de pesquisa web (OBRIGATÓRIO)
 
 Você **deve** pesquisar. Não estime demanda/mercado/preço de memória. Para cada tema finalista
