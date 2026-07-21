@@ -87,6 +87,28 @@ _(default inicial — soma 1,00)_
 > escolha do usuário bateu com o score; quando o padrão ficar claro, ajusta. Alinhamento de
 > posicionamento entra pela **Autoridade** (real + atual), não por flag.
 
+## Deploy contínuo — sempre (regra permanente)
+
+**Toda mudança no skill vai para o GitHub no mesmo turno em que é feita.** Sem pedir confirmação,
+sem acumular. O repo é a fonte da verdade e tem que estar sempre reproduzível a partir de um clone.
+
+**O que sempre commita + pusha:**
+- `SKILL.md`, `CLAUDE.md`, `references/**`, `assets/**`, `.gitignore`
+- Qualquer spec nova da esteira (ss1…ss6) e qualquer ajuste de método/critério
+
+**O que NUNCA entra** (a fronteira é inegociável):
+- `pessoas/**` — material real de pessoas reais (transcrições, dossiês, decisões, fotos, decks de
+  cliente). Fica só local. **Só entra com pedido explícito do usuário, e naquele caso específico.**
+
+**Disciplina que fecha o ciclo:**
+1. Terminou uma unidade coerente (uma spec, uma feature, um fix)? → **commita e pusha ali mesmo.**
+2. **Nada reutilizável pode ficar só no scratchpad.** Gerador, template ou script que outra pessoa
+   precisaria para reproduzir a etapa → move para `assets/` e commita. Senão o repo fica com o
+   *método* sem a *máquina* — que é o pior estado possível para um skill portátil.
+3. Antes de encerrar um bloco de trabalho, rode `git status` e **não deixe pendência** (nem arquivo
+   solto na raiz do repo).
+4. Mensagem no padrão do projeto; coautoria do Claude no rodapé.
+
 ## Privacidade / versionamento
 
 - `pessoas/` contém material real de pessoas reais e **não é versionado** por padrão (ver `.gitignore`).
